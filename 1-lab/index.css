@@ -1,0 +1,26 @@
+body {
+  background: #ABF333;
+}
+
+input[name="info"] {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 20px;
+  padding-left: 5px;
+}
+
+button.click {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+button.click:hover {
+  color: red;
+}
+
+div.repeater {
+  margin-top: 10px;
+}

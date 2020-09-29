@@ -1,0 +1,163 @@
+.wrapper {
+  min-height: 99.9vh;
+  margin: -8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #b3bfb3;
+}
+
+.row-content {
+  display: flex;
+  font-size: 20px;
+  flex: 1 1 auto;
+}
+
+.col-1 {
+  box-sizing: border-box;
+  width: 40%;
+  max-height: 93vh;
+  background-color: #e3dcdc;
+  border-right: 1px solid #b3bfb3;
+  overflow-y: scroll;
+}
+
+.mainLeftPart {
+  box-sizing: border-box;
+  padding-left: 10%;
+  height: 15vh;
+  border-bottom: 1px solid #b3bfb3;
+}
+
+.inscriptionAllNotes {
+  padding-top: 15px;
+}
+
+
+.quantityNotes {
+  font-size: 14px;
+  color: #6e846e;
+}
+
+
+.col-2 {
+  box-sizing: border-box;
+  width: 60%;
+  background-color: #F0DEE5;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonNote {
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  float: right;
+  border: 1px solid #b3bfb3;
+  font-size: 12px;
+}
+
+.buttonNote:hover {
+  cursor: pointer;
+  background: #FBA990;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.remove {
+  background-color: #C52121;
+  border-radius: 0 0 0 5px;
+}
+
+.addNote {  
+  border-radius: 5px 0 0 0;
+  margin-top: -0.1vh;
+  background-color: #5AEF1C;
+}
+
+button {
+  display: inline-block;
+  margin: 10px auto;
+  height: 30px;
+  width: 100px;
+}
+
+button:hover {
+  background: #FBA990;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+textarea.title {
+  border: 1px solid #b3bfb3;
+  background-color: #F0DEE5;
+  height: 60px;
+  width: 70%;
+  margin: 0px auto;
+  margin-top: 40px;
+  resize: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+textarea.mainText {
+  border: 1px solid #b3bfb3;
+  background-color: #F0DEE5;
+  height: 300px;
+  width: 70%;
+  margin: 20px auto;
+  margin-top: 0;
+  resize: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.footer {
+  box-sizing: border-box;
+  height: 6.8vh;
+  width: 100%;
+  padding-top: 1.6vh;
+  font-style: italic;
+  text-align: center;
+  background-color: #4a4a43;
+  color: #5e0202;
+}
+
+.newBlock {
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 10%;
+  height: 15vh;
+  background-color: #baecba;
+  border-top: 1px solid #b3bfb3;
+  border-bottom: 1px solid #b3bfb3;
+}
+
+.newBlock:hover {
+  box-sizing: border-box;
+  border-top: 1px solid #3928D7;
+  border-bottom: 1px solid #3928D7;
+  background-color: #DDF782;
+  cursor: pointer;
+}
+
+.activeNote {
+  height: 15vh;
+  box-sizing: border-box;
+  border-top: 1px solid #3928D7;
+  border-bottom: 1px solid #3928D7; 
+  background-color: #57D93D !important;
+}
+
+h3.titleText {
+  margin-top: -0.5vh;
+  font-size: 100%;
+  color: black;
+}
+
+.time {
+  font-size: 14px;
+  margin-top: -2.5vh;
+}
