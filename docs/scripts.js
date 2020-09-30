@@ -53,8 +53,6 @@ const addNote = () => {
   div.className = 'newBlock';
   notes.push({div});
   divOverAllNotes.after(div);
-  console.log(divOverAllNotes.clientHeight);
-  console.log(divOverAllNotes.clientWidth);
   location.href = baseURL + '#';
   div.addEventListener(('click'), () => changeActiveNote(activeNote, div));
   if (activeNote[0]) activeNote[0].classList.remove('activeNote');
