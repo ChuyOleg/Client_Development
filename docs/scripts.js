@@ -89,7 +89,7 @@ const saveInfo = (object, title, text, time) => {
   	const activeNoteIndex = activeNote[1];
   	const prevTitle = notes[activeNoteIndex]['title'];
   	
-  	if (!title) title = document.querySelector('textarea.title').value.trim();
+  	if (!title) title = document.querySelector('textarea.title').value.trim().replace(/\r?\n|\r/g, "");
 	  if (!text) text = document.querySelector('textarea.mainText').value; 
 	  const timeAndDate = time || TimeAndDate();
 
