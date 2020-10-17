@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 0;
+}
+
+header {
+  width: 87%;
+  height: 130px;
+  margin: 0 auto;
+}
+
+div.logo {
+  padding-top: 15px;
+  text-align: center;
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid #D5CBE4;
+}
+
+div.logo img {
+  height: 50px;
+  width: 100px;
+}
+
+div.searchBar {
+  background-color: #eff0f1;
+  box-sizing: border-box;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 6%;
+  padding-left: 10px;
+  height: 138px;
+}
+
+div.searchBar a {
+  display: inline-block;
+	margin-top: 65px;
+  text-decoration: none;
+  color: #383FED;
+}
+
+div.searchBar a span {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+div.searchBar a:hover {
+  color: red;
+}
+
+form.wrapper {
+	margin-top: 15px;
+  border: 1px solid #e3e4e4;
+  width: 170px;
+}
+
+div.searchBar input {
+	height: 25px;
+	border: 0px solid #e3e4e4;
+	padding: 0px 5px 0px 5px;
+	font-size: 12px;
+  width: 130px;
+  margin-right: -5px;
+}
+
+div.searchBar button {
+	box-sizing: border-box;
+	border: 0px solid black;
+	background-repeat: no-repeat;
+	background-color: white;
+	padding-top: 9px;
+	background-image: url('img/search_icon_1.png');
+  width: 30px;
+  height: 25px;
+}
+
+div.searchBar button:hover {
+  cursor: pointer;
+}
+
+div.searchBar button:hover {
+  background-image: url('img/search_icon_2.png');
+}
+
+div.menu {
+  padding: 20px 0;
+  height: 100px;
+}
+
+div.menu ul {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0px;
+}
+
+div.menu li.Menu {
+  display: none;
+}
+
+div.menu a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
+div.menu a:hover {
+  color: red;
+}
+
+section {
+  height: 500px;
+  width: 100%;
+  background-color: #5D43B5;
+}
+
+@media only screen and (max-width: 1280px) {
+  /*Замінити Models, Pre-owned Cars ... на menu with list*/
+  div.searchBar {
+    right: 0;
+  }
+  
+  div.menu ul li.Pre-owned,
+  div.menu ul li.Motorsports,
+  div.menu ul li.Service,
+  div.menu ul li.Company {
+    display: none;
+  }
+
+  div.menu li.Menu {
+    display: inline-block;
+  }
+
+}
