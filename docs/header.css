@@ -96,6 +96,10 @@ div.menu ul {
   padding-left: 0px;
 }
 
+div.menu ul li {
+  height: 25px;
+}
+
 div.menu li.Menu {
   display: none;
 }
@@ -106,8 +110,26 @@ div.menu a {
   margin-right: 20px;
 }
 
-div.menu a:hover {
+div.menu li:hover a{
   color: red;
+}
+
+div.menu li ul {
+  flex-direction: column;
+  padding-top: 8px;
+  /*display: none;*/
+  background: white;
+  position: absolute;
+  left: 5%;
+}
+
+div.menu li ul li {
+  border: 1px solid #D5CBE4;
+  padding: 10px;
+}
+
+div.menu li:hover ul {
+  display: block;
 }
 
 section {
