@@ -110,26 +110,57 @@ div.menu a {
   margin-right: 20px;
 }
 
-div.menu li:hover a{
+div.menu ul li a:hover {
   color: red;
 }
 
 div.menu li ul {
   flex-direction: column;
-  padding-top: 8px;
-  /*display: none;*/
+  display: none;
   background: white;
+  margin-top: 8px;
   position: absolute;
   left: 5%;
+  width: 20%;
+}
+
+div.menu li ul a {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 25px 0 0 10px;
 }
 
 div.menu li ul li {
+  box-sizing: border-box;
+  height: 70px;
   border: 1px solid #D5CBE4;
-  padding: 10px;
 }
 
+div.menu li ul li {
+}
+
+/*div.menu li ul li:hover {
+  color: white;
+  background: red;
+}
+
+div.menu li ul li:hover a {
+  color: white;
+}
+
+*/
 div.menu li:hover ul {
   display: block;
+}
+
+div.menu li ul li ul {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 100%;
+  width: 200%;
 }
 
 section {
