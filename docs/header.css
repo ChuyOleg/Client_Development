@@ -48,7 +48,7 @@ div.searchBar a span {
 }
 
 div.searchBar a:hover {
-  color: red;
+  color: #bb0f0f;
 }
 
 form.wrapper {
@@ -85,105 +85,105 @@ div.searchBar button:hover {
   background-image: url('img/search_icon_2.png');
 }
 
-div.menu {
+.drop-down-list {
   padding: 20px 0;
-  height: 100px;
 }
 
-div.menu ul {
-  list-style-type: none;
-  display: flex;
+.drop-down-list ul {
   padding-left: 0px;
+  list-style: none;
 }
 
-div.menu ul li {
-  height: 25px;
+.drop-down-list > ul {
+  display: flex;
 }
 
-div.menu li.Menu {
-  display: none;
-}
 
-div.menu a {
-  text-decoration: none;
+.drop-down-list > ul li a {
+  display: block;
+  padding: 0 30px 8px 0;
   color: black;
-  margin-right: 20px;
+  text-decoration: none;
 }
 
-div.menu ul li a:hover {
-  color: red;
+.drop-down-list > ul > li > a:hover {
+  color: #bb0f0f;
 }
 
-div.menu li ul {
-  flex-direction: column;
-  display: none;
-  background: white;
-  margin-top: 8px;
-  position: absolute;
-  left: 5%;
-  width: 20%;
+.drop-down-list > ul li:first-child a{
+  padding-right: 60px;
 }
 
-div.menu li ul a {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 25px 0 0 10px;
+.drop-down-list > ul li {
+  position: relative;
 }
 
-div.menu li ul li {
-  box-sizing: border-box;
-  height: 70px;
-  border: 1px solid #D5CBE4;
-}
-
-div.menu li ul li {
-}
-
-/*div.menu li ul li:hover {
-  color: white;
-  background: red;
-}
-
-div.menu li ul li:hover a {
-  color: white;
-}
-
-*/
-div.menu li:hover ul {
-  display: block;
-}
-
-div.menu li ul li ul {
+.drop-down-list ul li ul {
   position: absolute;
   display: none;
   top: 0;
   left: 100%;
+}
+
+.drop-down-list ul li:hover > ul {
+  display: block;
+}
+
+.drop-down-list > ul > li > ul {
+  top: 100%;
+  left: -10%;
+}
+
+.drop-down-list > ul > li > ul a {
+  box-sizing: border-box;
+  border: 1px solid #d5cbe4;
+  padding: 15px 10px;
+  transition: all 0.3s ease-out 0s;
+  background: white;
+  font-size: 12px;
+}
+
+.drop-down-list > ul > li > ul a:hover {
+  color: white;
+  background: #bb0f0f;
+  border: 1px solid #bb0f0f;
+}
+
+.drop-down-list ul ul li {
   width: 200%;
 }
+
+.menu {
+  display: none;
+}
+
+/*box-shadow*/
 
 section {
   height: 500px;
   width: 100%;
   background-color: #5D43B5;
+  padding-top: 200px;
+  padding-left: 100px;
 }
 
+
 @media only screen and (max-width: 1280px) {
-  /*Замінити Models, Pre-owned Cars ... на menu with list*/
+  
   div.searchBar {
     right: 0;
   }
   
-  div.menu ul li.Pre-owned,
-  div.menu ul li.Motorsports,
-  div.menu ul li.Service,
-  div.menu ul li.Company {
+  .pre-owned-cars,
+  .motorsports,
+  .service,
+  .company {
     display: none;
   }
 
-  div.menu li.Menu {
-    display: inline-block;
+  .menu {
+    display: block;
   }
+
 
 }
