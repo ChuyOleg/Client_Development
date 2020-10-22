@@ -32,7 +32,7 @@ div.searchBar {
   top: 0;
   right: 6%;
   padding-left: 10px;
-  height: 138px;
+  height: 140px;
 }
 
 div.searchBar a {
@@ -113,22 +113,12 @@ div.searchBar button:hover {
   transition: all 0.3s ease-out 0s;
 }
 
-.drop-down-list a:hover {
-  color: #bb0f0f;
-}
-
 .drop-down-list .first-nesting a {
   box-sizing: border-box;
   border: 1px solid #d5cbe4;
   padding: 15px 10px;
   font-size: 12px;
   width: 200px;
-}
-
-.drop-down-list .first-nesting a:hover {
-  color: white;
-  background: #bb0f0f;
-  border: 1px solid #bb0f0f;
 }
 
 .drop-down-list > ul li {
@@ -140,10 +130,6 @@ div.searchBar button:hover {
   display: none;
   top: 0;
   left: 100%;
-}
-
-.drop-down-list li {
-  /*background: green;*/
 }
 
 .drop-down-list li:hover > ul {
@@ -188,16 +174,8 @@ section {
 
   .extraMenu a {
     font-size: 12px;
-    display: block;
-    background: white;
     border: 1px solid #d5cbe4;
     padding: 15px 10px;
-  }
-
-  .extraMenu a:hover {
-    color: white;
-    background: #bb0f0f;
-    border: 1px solid #bb0f0f;
   }
 
   .drop-down-list ul.extraMenu li ul {
