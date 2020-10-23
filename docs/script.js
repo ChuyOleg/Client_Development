@@ -2,6 +2,9 @@ const menuIcon = document.querySelector('.menu');
 const extraMenu  = document.querySelector('.extraMenu');
 const nav = document.querySelector('.drop-down-list');
 const li_list = nav.querySelectorAll('li');
+const searchBar_input = document.querySelector('.searchBar input');
+
+searchBar_input.addEventListener
 
 li_list.forEach(li => {
   const a = li.querySelector('a');

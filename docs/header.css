@@ -3,6 +3,7 @@ html, body {
   font-size: 14px;
   margin: 0;
   padding: 5px 0;
+  font-family: Arial;
 }
 
 header {
@@ -55,15 +56,16 @@ form.wrapper {
 	margin-top: 15px;
   border: 1px solid #e3e4e4;
   width: 170px;
+  display: flex;
 }
 
 div.searchBar input {
+  box-sizing: border-box;
 	height: 25px;
 	border: 0px solid #e3e4e4;
-	padding: 0px 5px 0px 5px;
+  padding: 0px 10px 0px 5px;
 	font-size: 12px;
-  width: 130px;
-  margin-right: -5px;
+  width: 140px;
 }
 
 div.searchBar button {
@@ -71,7 +73,6 @@ div.searchBar button {
 	border: 0px solid black;
 	background-repeat: no-repeat;
 	background-color: white;
-	padding-top: 9px;
 	background-image: url('img/search_icon_1.png');
   width: 30px;
   height: 25px;
@@ -79,14 +80,11 @@ div.searchBar button {
 
 div.searchBar button:hover {
   cursor: pointer;
-}
-
-div.searchBar button:hover {
   background-image: url('img/search_icon_2.png');
 }
 
 .drop-down-list {
-  padding: 20px 0;
+  padding: 21px 0 0 0;
   display: flex;
 }
 
@@ -168,7 +166,7 @@ section {
   ul.extraMenu {
     display: none;
     position: relative;
-    top: 25px;
+    top: 24px;
     left: -80px;
   }
 
