@@ -145,10 +145,42 @@ div.searchBar button:hover {
   display: none;
 }
 
-section {
-  height: 500px;
+main {
   width: 100%;
-  background-color: #5D43B5;
+  height: 700px;
+}
+
+section.carInfo {
+  box-sizing: border-box;
+  height: 600px;
+  width: 100%;
+  background-image: url('img/taycan_background.jpg');
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-template-rows: 300px 150px 100px;
+}
+
+section.carInfo div:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+section.carInfo div {
+  text-align: center;
+  border: 1px solid red;
+  
+}
+
+section .Turbo,
+section .TurboS {
+  display: none;
+}
+
+section div img {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid green;
 }
 
 /*box-shadow*/
