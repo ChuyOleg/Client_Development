@@ -1,3 +1,7 @@
+/*!!!!!!!!!1111!!!!!
+!!!!!! HEADER !!!!!!
+!!!!!!!!!!!!!!!!!!*/
+
 const menuIcon = document.querySelector('.menu');
 const extraMenu  = document.querySelector('.extraMenu');
 const nav = document.querySelector('.drop-down-list');
@@ -61,4 +65,53 @@ window.addEventListener('resize', () => {
   } else {
     firstNestingLI.forEach(elem => elem.classList.remove('first-nesting-a'));
   }
+})
+
+/*!!!!!!!!!!!!!!!!
+!!!!! MAIN !!!!!!!
+!!!!!!!!!!!!!!!!*/
+
+const cars = [];
+let carNumber = 0;
+
+const previousButton = document.querySelector('div.previous');
+const nextButton = document.querySelector('div.next');
+
+const circles = [];
+let activeCircle = 0;
+
+circles.push(document.querySelector('div.first'));
+circles.push(document.querySelector('div.second'));
+circles.push(document.querySelector('div.third'));
+
+cars.push(document.querySelector('div.fourS'));
+cars.push(document.querySelector('div.Turbo'));
+cars.push(document.querySelector('div.TurboS'));
+
+previousButton.addEventListener(('click'), () => {
+  cars[carNumber].style.display = 'none';
+  circles[carNumber].style.background = 'white';
+  carNumber = (carNumber > 0) ? --carNumber : 2;
+  cars[carNumber].style.display = 'grid';
+  circles[carNumber].style.background = 'red';
+});
+
+nextButton.addEventListener(('click'), () => {
+  cars[carNumber].style.display = 'none';
+  circles[carNumber].style.background = 'white';
+  carNumber = (carNumber < 2) ? ++carNumber : 0;
+  cars[carNumber].style.display = 'grid';
+  circles[carNumber].style.background = 'red';
+});
+
+circles.forEach((circle, index) => {
+  circle.addEventListener(('click'), () => {
+  	if (activeCircle === index) return;
+    cars[activeCircle].style.display = 'none';
+    circles[activeCircle].style.background = 'white';
+    cars[index].style.display = 'grid';
+    circle.style.background = 'red';
+    console.log(activeCircle, index);
+    activeCircle = index;
+  })
 })
