@@ -293,6 +293,8 @@ section.carInfo div.circles div:hover {
   cursor: pointer;
 }
 
+/*transform*/
+
 @media only screen and (max-width: 1280px) {
   
   div.searchBar,
@@ -320,5 +322,76 @@ section.carInfo div.circles div:hover {
   .drop-down-list ul.extraMenu li ul {
     left: 100%;
     top: 0;
+  }
+
+  section.carInfo {
+    padding: 20px 30px 0px 30px;
+  }
+
+  section.carInfo div.carName {
+    grid-area: nameANDimage;
+  }
+
+  section.carInfo div.acceleration {
+    grid-area: info1;
+    padding-top: 25px;
+  }
+
+  section.carInfo div.topSpeed {
+    grid-area: info2;
+    padding-top: 25px;
+  }
+
+  section.carInfo div.kW {
+    grid-area: info3;
+  }
+
+  section.carInfo div.TechnoSpecs {
+    grid-area: button1;
+  }
+
+  section.carInfo div.BuildYourOwn {
+    grid-area: button2;
+  }
+
+  section.carInfo div.Compare {
+    grid-area: button3;
+  }
+
+  section.carInfo div img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+}
+
+  section.carInfo div.carView {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 60px 60px 60px;
+    grid-template-areas: 
+      "nameANDimage info1 info2"
+      "nameANDimage info3 info3"
+      "button1 button1 button1"
+      "button2 button2 button2"
+      "button3 button3 button3"
+  }
+ 
+  section.carInfo div.Turbo,
+  section.carInfo div.TurboS {
+    display: none;
+  }
+
+  section.carInfo div.withBorder a {
+    display: block;
+    text-align: left;
+  }
+
+  section.carInfo div.button {
+    top: 55%;
+  }
+
+  section.carInfo > div > div:nth-child(1) {
+    grid-column: 1 / 2;
   }
 }

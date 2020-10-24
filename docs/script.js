@@ -72,13 +72,12 @@ window.addEventListener('resize', () => {
 !!!!!!!!!!!!!!!!*/
 
 const cars = [];
-let carNumber = 0;
+const circles = [];
+let activeCar = 0;
 
 const previousButton = document.querySelector('div.previous');
 const nextButton = document.querySelector('div.next');
 
-const circles = [];
-let activeCircle = 0;
 
 circles.push(document.querySelector('div.first'));
 circles.push(document.querySelector('div.second'));
@@ -89,29 +88,28 @@ cars.push(document.querySelector('div.Turbo'));
 cars.push(document.querySelector('div.TurboS'));
 
 previousButton.addEventListener(('click'), () => {
-  cars[carNumber].style.display = 'none';
-  circles[carNumber].style.background = 'white';
-  carNumber = (carNumber > 0) ? --carNumber : 2;
-  cars[carNumber].style.display = 'grid';
-  circles[carNumber].style.background = 'red';
+  cars[activeCar].style.display = 'none';
+  circles[activeCar].style.background = 'white';
+  activeCar = (activeCar > 0) ? --activeCar : 2;
+  cars[activeCar].style.display = 'grid';
+  circles[activeCar].style.background = 'red';
 });
 
 nextButton.addEventListener(('click'), () => {
-  cars[carNumber].style.display = 'none';
-  circles[carNumber].style.background = 'white';
-  carNumber = (carNumber < 2) ? ++carNumber : 0;
-  cars[carNumber].style.display = 'grid';
-  circles[carNumber].style.background = 'red';
+  cars[activeCar].style.display = 'none';
+  circles[activeCar].style.background = 'white';
+  activeCar = (activeCar < 2) ? ++activeCar : 0;
+  cars[activeCar].style.display = 'grid';
+  circles[activeCar].style.background = 'red';
 });
 
 circles.forEach((circle, index) => {
   circle.addEventListener(('click'), () => {
-  	if (activeCircle === index) return;
-    cars[activeCircle].style.display = 'none';
-    circles[activeCircle].style.background = 'white';
+  	if (activeCar === index) return;
+    cars[activeCar].style.display = 'none';
+    circles[activeCar].style.background = 'white';
     cars[index].style.display = 'grid';
     circle.style.background = 'red';
-    console.log(activeCircle, index);
-    activeCircle = index;
+    activeCar = index;
   })
 })
