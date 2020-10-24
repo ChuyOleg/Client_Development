@@ -145,45 +145,75 @@ div.searchBar button:hover {
   display: none;
 }
 
+/*!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!! MAIN !!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!*/
+
 main {
   width: 100%;
-  height: 700px;
+  height: 800px;
 }
 
 section.carInfo {
+  padding: 10px 30px;
   box-sizing: border-box;
-  height: 600px;
+  height: 650px;
   width: 100%;
   background-image: url('img/taycan_background.jpg');
   color: white;
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-template-rows: 400px 150px 60px;*/
+}
+
+section.carInfo > div {
+  display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
-  grid-template-rows: 300px 150px 100px;
+  grid-template-rows: 400px 150px 60px;
 }
 
-section.carInfo div:nth-child(1) {
+section.carInfo > div > div:nth-child(1) {
   grid-column: 1 / -1;
 }
 
 section.carInfo div {
   text-align: center;
-  border: 1px solid red;
-  
 }
 
-section .Turbo,
-section .TurboS {
+section div.fourS,
+section div.Turbo {
   display: none;
 }
 
-section div img {
+section.carInfo div img {
   display: block;
-  margin: 10px auto;
-  border: 1px solid green;
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
 }
 
-/*box-shadow*/
+section.carInfo h1 {
+  font-size: 35px;
+}
+
+section.carInfo div.withBorder a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid white;
+  transition: all 0.3s ease-out 0s;
+}
+
+section.carInfo div.withBorder a:hover {
+  border: 1px solid red;
+  color: red;
+  box-shadow: -5px 5px 5px black;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 1280px) {
   
