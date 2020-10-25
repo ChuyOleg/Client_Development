@@ -173,7 +173,6 @@ section.carInfo div.Tools {
   position: absolute;
   top: 0;
   right: 6%;
-  background: linear-gradient(#eff0f1, #2a4b6d);
   background: linear-gradient(45deg, #6B5CE3, #3027EA);  
 }
 
@@ -291,6 +290,37 @@ section.carInfo div.circles .first {
 
 section.carInfo div.circles div:hover {
   cursor: pointer;
+}
+
+main div.anchors {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0px;
+  background: white;
+}
+
+main div.anchors a {
+  display: block;
+  width: 20%;
+  text-decoration: none;
+  color: black;
+  line-height: 60px;
+  text-align: center;
+  transition: transform 1s ease 0s;
+}
+
+main div.anchors a:hover {
+  color: #19BEE0;
+  transform: rotate(360deg);
+}
+
+main section#Highlights {
+  background: linear-gradient(#000000, #800000, #000000);
+  color: white;
+  margin-top: -20px;
+  height: 1000px;
 }
 
 /*transform*/
