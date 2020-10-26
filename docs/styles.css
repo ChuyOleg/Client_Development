@@ -320,8 +320,53 @@ main section#Highlights {
   background: linear-gradient(#000000, #800000, #000000);
   color: white;
   margin-top: -20px;
-  height: 1000px;
+  padding: 100px 10% 50px 10%;
+  max-height: 600px;
 }
+
+main section#Highlights > p {
+  line-height: 25px;
+}
+
+main section#Highlights a {
+  display: inline-block;
+  background: #3594F8;
+  height: 40px;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+main section#Highlights a:hover {
+  color: #3594F8;
+  background: white;
+}
+
+main section#Highlights a span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+main section#Highlights h1 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+main section#Highlights div.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+main section#Highlights div.wrapper div {
+  border-left: 1px solid white;
+  padding-left: 15px;
+  width: 50%;
+}
+
 
 /*transform*/
 
@@ -423,5 +468,15 @@ main section#Highlights {
 
   section.carInfo > div > div:nth-child(1) {
     grid-column: 1 / 2;
+  }
+
+  section#Highlights div.wrapper {
+    flex-direction: column;
+  }
+
+  main section#Highlights div.wrapper div {
+    border-left: 0;
+    padding-left: 0;
+    width: 100%;
   }
 }
