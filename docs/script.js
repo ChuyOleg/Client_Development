@@ -113,3 +113,27 @@ circles.forEach((circle, index) => {
     activeCar = index;
   })
 })
+
+sections = [];
+sections.push(document.querySelector('#Highlights'));
+sections.push(document.querySelector('#Design'));
+sections.push(document.querySelector('#Performance'));
+
+sections.forEach(section => {
+  const button = section.querySelector('a');
+  section.addEventListener('mouseenter', () => {
+    button.style['animation-play-state'] = 'running';
+  })
+});
+
+sections.forEach(section => {
+  const button = section.querySelector('a');
+  section.addEventListener('mouseleave', () => {
+    button.style['animation-play-state'] = 'paused';
+  })
+});
+
+//const highlightsSection = document.querySelector('.Highlights');
+//const designSection = document.querySelector('.Design');
+//const performanceSection = document.querySelector('.Performance');
+
