@@ -152,7 +152,7 @@ div.searchBar button:hover {
 
 main {
   width: 100%;
-  height: 800px;
+  /*height: 800px;*/
   font-size: 16px;
 }
 
@@ -324,11 +324,15 @@ main section#Highlights {
   max-height: 600px;
 }
 
-main section#Highlights > p {
+main section#Highlights > p,
+main section#Design > p,
+main section#Performance > p {
   line-height: 25px;
 }
 
-main section#Highlights a {
+main section#Highlights a,
+main section#Design a,
+main section#Performance a{
   display: inline-block;
   background: #3594F8;
   height: 40px;
@@ -340,18 +344,24 @@ main section#Highlights a {
   margin-top: 20px;
 }
 
-main section#Highlights a:hover {
+main section#Highlights a:hover,
+main section#Design a:hover,
+main section#Performance a:hover {
   color: #3594F8;
   background: white;
 }
 
-main section#Highlights a span {
+main section#Highlights a span,
+main section#Design a span,
+main section#Performance a span {
   font-weight: bold;
   margin-right: 10px;
 }
 
-main section#Highlights h1 {
-  font-size: 34px;
+main section#Highlights h1,
+main section#Design h1,
+main section#Performance h1 {
+  font-size: 36px;
   margin-bottom: 40px;
 }
 
@@ -367,8 +377,21 @@ main section#Highlights div.wrapper div {
   width: 50%;
 }
 
+section#Design {
+  background: #FFA2A2;
+  color: white;
+  padding: 100px 10% 50px 10%;
+  max-height: 600px;
+  height: 600px;
+}
 
-/*transform*/
+section#Performance {
+  background: #D1CE0E;
+  color: white;
+  padding: 100px 10% 50px 10%;
+  max-height: 600px;
+  height: 600px;
+}
 
 @media only screen and (max-width: 1280px) {
   
