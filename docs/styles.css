@@ -6,6 +6,10 @@ html, body {
   font-family: Arial;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   width: 87%;
   height: 130px;
@@ -39,7 +43,6 @@ div.searchBar {
 div.searchBar a {
   display: inline-block;
 	margin-top: 65px;
-  text-decoration: none;
   color: #383FED;
 }
 
@@ -108,7 +111,6 @@ div.searchBar button:hover {
   background: white;
   padding: 0 30px 8px 0;
   color: black;
-  text-decoration: none;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -180,7 +182,6 @@ section.carInfo div.Tools {
 section.carInfo div.Tools a {
   display: block;
   box-sizing: border-box;
-  text-decoration: none;
   text-align: left;
   height: 100%;
   color: white;
@@ -257,7 +258,6 @@ section.carInfo h1 {
 section.carInfo div.withBorder a {
   display: inline-block;
   color: white;
-  text-decoration: none;
   padding: 10px;
   border: 1px solid white;
   transition: all 0.3s ease-out 0s;
@@ -306,7 +306,6 @@ main div.anchors {
 main div.anchors a {
   display: block;
   width: 20%;
-  text-decoration: none;
   color: black;
   line-height: 60px;
   text-align: center;
@@ -345,7 +344,6 @@ main section.anchorsBlock a {
   display: inline-block;
   background: #3594F8;
   height: 40px;
-  text-decoration: none;
   padding: 0 10px;
   line-height: 40px;
   color: white;
@@ -409,12 +407,81 @@ main section#Performance div.wrapper h2 {
   width: 25%;
 }
 
+/*!!!!!!!!!!!!!!!!!
+!!!!!!! FOOTER !!!!
+!!!!!!!!!!!!!!!!!*/
+
 footer {
   width: 100%;
 }
 
+footer div.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px;
+}
+
+footer div.lists ul {
+  list-style: none;
+}
+
+footer div.lists a {
+  display: block;
+  color: black;
+  margin-bottom: 15px;
+}
+
+footer div.lists a:hover {
+  color: #bb0f0f;
+}
+
+footer div.connecting {
+  margin-bottom: 10vh;
+  text-align: center;
+  color: #797979;
+}
+
+footer div.connecting a {
+  display: inline-block;
+  margin: -10px 5px 0 0;
+  height: 40px;
+  width: 40px;
+  font-weight: bold; 
+  background: #191f22;
+}
+
+footer div.connecting a:hover {
+  background: #2E4EE4;
+}
+
+footer div.connecting a.facebook {
+  background-image: url('img/facebook_logo.png'); 
+  background-size: cover;
+}
+
+footer div.connecting a.youtube {
+  background-image: url('img/youtube_logo.png') !important;
+  background-size: cover;
+}
+
+footer div.connecting a.youtube:hover {
+  background: red;
+  background-size: cover;
+}
+
+footer div.connecting a.twitter {
+  background-image: url('img/twitter_logo.png');
+  background-size: cover; 
+}
+
+footer div.connecting a.instagram {
+  background-image: url('img/instagram_logo.png');
+  background-size: cover;
+}
+
 div.copyright {
   background: #191f22;
+  box-sizing: border-box;
   color: white;
   height: 5vh;
   width: 100%;
@@ -539,21 +606,27 @@ div.copyright {
   }
 
   @keyframes button_riding {
-  0% {
-    left: 0%;
+    0% {
+      left: 0%;
+    }
+    25% {
+      left: 15%;
+    }
+    50% {
+      left: 30%;
+    }
+    75% {
+      left: 45%;
+    }
+    100% {
+      left: 60%;
+    }
   }
-  25% {
-    left: 15%;
+
+  footer div.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
   }
-  50% {
-    left: 30%;
-  }
-  75% {
-    left: 45%;
-  }
-  100% {
-    left: 60%;
-  }
-}
 
 }
