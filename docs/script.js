@@ -132,8 +132,3 @@ sections.forEach(section => {
     button.style['animation-play-state'] = 'paused';
   })
 });
-
-//const highlightsSection = document.querySelector('.Highlights');
-//const designSection = document.querySelector('.Design');
-//const performanceSection = document.querySelector('.Performance');
-

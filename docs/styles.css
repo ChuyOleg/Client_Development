@@ -152,8 +152,9 @@ div.searchBar button:hover {
 
 main {
   width: 100%;
-  /*height: 800px;*/
   font-size: 16px;
+  /*border: 5px solid green;*/
+  border-radius: 20px;
 }
 
 section.carInfo {
@@ -376,7 +377,7 @@ main section.anchorsBlock a:hover {
   }
   100% {
     left: 80%;
-  };
+  }
 }
 
 main section.anchorsBlock a span {
@@ -406,6 +407,23 @@ main section#Performance div.wrapper h2 {
   border-left: 1px solid white;
   padding-left: 15px;
   width: 25%;
+}
+
+footer {
+  width: 100%;
+}
+
+div.copyright {
+  background: #191f22;
+  color: white;
+  height: 5vh;
+  width: 100%;
+  line-height: 5vh;
+  padding-left: 5%;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 7px 7px 0 0;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -519,4 +537,23 @@ main section#Performance div.wrapper h2 {
     padding-left: 0;
     width: 100%;
   }
+
+  @keyframes button_riding {
+  0% {
+    left: 0%;
+  }
+  25% {
+    left: 15%;
+  }
+  50% {
+    left: 30%;
+  }
+  75% {
+    left: 45%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+
 }
