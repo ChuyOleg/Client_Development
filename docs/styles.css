@@ -71,6 +71,13 @@ div.searchBar input {
   width: 140px;
 }
 
+div.searchBar input:active,
+div.searchBar input:focus,
+div.searchBar button:active,
+div.searchBar button:focus {
+  outline: none;
+}
+
 div.searchBar button {
 	box-sizing: border-box;
 	border: 0px solid black;
