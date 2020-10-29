@@ -132,3 +132,15 @@ sections.forEach(section => {
     button.style['animation-play-state'] = 'paused';
   })
 });
+
+/*!!!!!!!!!!!!!!!!
+!!!! PARALLAX !!!!
+!!!!!!!!!!!!!!!!*/
+
+const roadBG = document.querySelector('.road');
+const carOnRoad = document.querySelector('.road .car');
+
+roadBG.addEventListener('mousemove', (event) => {
+  roadBG.style.transform = `translateX(${event.clientX/70}px)`;
+  carOnRoad.style.transform = `translateX(${event.clientX/40}px)`;
+});

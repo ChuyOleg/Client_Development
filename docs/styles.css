@@ -407,6 +407,67 @@ main section#Performance div.wrapper h2 {
   width: 25%;
 }
 
+main section.parallax {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding: 0;
+  color: #000000;
+  font-size: 18px;
+  font-style: italic;
+}
+
+main section.parallax .road{
+  margin-top: -19px;
+  width: 110%;
+  height: 100%;
+  background: url('img/sea.jpg') center no-repeat; 
+  background-size: cover;
+  position: relative;
+  left: -10%;
+}
+
+main section.parallax .car {
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  width: 50%;
+  height: 300px;
+  background: url('img/taycan_1.png') center no-repeat;
+  background-size: cover;
+}
+
+main section.parallax .text {
+  position: absolute;
+  top: 10%;
+  width: 40%;
+}
+
+main section.parallax .Personalisation {
+  left: 15%;
+}
+
+main section.parallax .Contact {
+  right: 0%;
+}
+
+main section.parallax .text a {
+  display: inline-block;
+  box-sizing: border-box;
+  background: #191f22;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+
+main section.parallax .text a:hover {
+  background: white;
+  color: #191f22;
+}
+
 /*!!!!!!!!!!!!!!!!!
 !!!!!!! FOOTER !!!!
 !!!!!!!!!!!!!!!!!*/
@@ -622,6 +683,13 @@ div.copyright {
       left: 60%;
     }
   }
+
+  main section.parallax .car {
+  bottom: 8%;
+  left: 30%;
+  width: 60%;
+  height: 300px;
+}
 
   footer div.lists {
     display: grid;
