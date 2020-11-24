@@ -1,324 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<title>Porsche Taycan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>СHO_Pizza</title>
 </head>
 <body>
-  <header>
-  	  
-  	  <div class="logo">
-  	  	<a href="#"><img src="img/Porsche_logo.png" alt="Porshce_Logo"></a>
-  	  </div>
-  	  
-  	  <div class="searchBar">
-  	  	<form class="wrapper">
-  	  	  <input type="text" name="info" placeholder="Enter search term">
-  	  	  <button></button>	
-  	  	</form>
-  	  	<a href="#">Build your Porsche <span>>></span></a>
-  	  </div>
-      
-      <nav class="drop-down-list">
-      	
-      	<ul class="zero-nesting models-menu">
-   
-      		<li class="models"><a href="#" class="first-nesting-a">Models</a>
-            <ul class="first-nesting">
-            	
-            	<li><a href="#">718</a>
-                <ul class="second-nesting">
-                	<li><a href="#">718 Cayman Models</a></li>
-                	<li><a href="#">718 Boxster Models</a></li>
-                	<li><a href="#">718 T Models</a></li>
-                	<li><a href="#">718 GTS 4.0 Models</a></li>
-                	<li><a href="#">718 Cayman GT4</a></li>
-                	<li><a href="#">718 Spyder</a></li>
-                </ul>
-            	</li>
-            	
-            	<li><a href="#">911</a>
-                <ul class="second-nesting">
-                  <li><a href="#">911 Carrera Model</a></li>
-                  <li><a href="#">911 Turbo Model</a></li>
-                </ul>
-            	</li>
-            	
-            	<li><a href="#">Taycan</a>
-            	  <ul class="second-nesting">
-                	<li><a href="#">Taycan Models</a></li>
-                	<li><a href="#">E-Performance</a></li>
-                </ul>
-              </li>
-            	
-            	<li><a href="#">Cayenne</a>
-            	  <ul class="second-nesting">
-                	<li><a href="#">Cayenne Models</a></li>
-                	<li><a href="#">E-Performance</a></li>
-                </ul>
-            	</li>
-            
-            </ul>
-      		</li>
-      		
-      		<li class="menu"><a href="#" class="first-nesting-a">Menu</a></li>
 
-      	</ul>
-
-      	<ul class="extraMenu zero-nesting">
-      		<li class="pre-owned-cars"><a href="#" class="first-nesting-a">Pre-owned Cars</a>
-            <ul class="first-nesting">
-            	<li><a href="#">Porsche Approved</a></li>
-            	<li><a href="#">Porsche Werkswagen</a></li>
-            </ul>
-      		</li>
-      		
-      		<li class="motorsports"><a href="#" class="first-nesting-a">Motorsports & Events</a>
-      		  <ul class="first-nesting">
-            	<li><a href="#">Motorsport</a></li>
-            	<li><a href="#">Porsche Experience</a></li>
-            	<li><a href="#">Porsche Clubs</a></li>
-            	<li><a href="#">Porsche Golf</a></li>
-            </ul>
-      		</li>
-      		
-      		<li class="service"><a href="#" class="first-nesting-a">Service & Accessories</a>
-            <ul class="first-nesting">
-            	<li><a href="#">Porsche Exclusive Manufaktur</a></li>
-            	<li><a href="#">Experience Werk 1</a></li>
-            	<li><a href="#">Factory delivery</a></li>
-            	<li><a href="#">Porsche Connect</a></li>
-            </ul>
-      		</li>
-      		
-      		<li class="company"><a href="#" class="first-nesting-a">Company</a>
-            <ul class="first-nesting">
-            	<li><a href="#">Porsche at a glance</a></li>
-            	<li><a href="#">Newsroom & Press</a></li>
-            	<li><a href="#">Jobs & Career</a></li>
-            	<li><a href="#">Christophorus - The Porsche Magazine</a></li>
-            	<li><a href="#">Porsche Museum</a></li>
-            	<li><a href="#">Porsche Pavilion</a></li>
-            </ul>
-      		</li>
-
-        </ul>
-
-      </nav>
+  <header class="container-fluid">
+  	<div class="row navbar justify-content">
+  		<div class="col-4 col-lg-4 order-1 order-lg-1 text-center logo">
+  			<a href="#">
+  				<div>CHO</div>
+  				<span>Pizza</span>
+  			</a>
+  		</div>
+  		<div class="col-3 col-lg-1 order-3 order-lg-2 text-center catalog"><a href="#">Акції</a></div>
+  		<div class="col-3 col-lg-1 order-4 order-lg-3 text-center catalog"><a href="#">Піца</a></div>
+  		<div class="col-3 col-lg-1 order-5 order-lg-4 text-center catalog"><a href="#">Напої</a></div>
+  		<div class="col-3 col-lg-1 order-6 order-lg-5 text-center catalog"><a href="#">Десерти</a></div>
+  		<div class="col-8 col-lg-4 order-2 order-lg-6">
+  			<div class="basket">
+  			  <div class="img-quantity">
+            <div class="basket-photo"></div>
+   			    <span id="quantity">0</span>
+  			  </div>
+  			  <span id="price">0 грн</span>
+  			  <a href="#" id="order">Замовити</a>
+  		  </div>
+  		</div>
+  	</div>
   </header>
-  
+
   <main>
-  	
-    <section class="carInfo">
-  	
-	  	<div class="Tools">
-	  		<a href="#">Tools & Services <span>+</span></a>
+  	<div class="slider">
+  		<div class="slide-wrapper">
+  			<div class="action-1"></div>
+  			<div class="action-2"></div>
+  			<div class="action-3"></div>
+  			<div class="action-4"></div>
+  		</div>
+	  	<div class="switch">
+	  		<div class="circle"></div>
+	  		<div class="circle"></div>
+	  		<div class="circle"></div>
+	  		<div class="circle"></div>
+	  		<div class="circle"></div>
 	  	</div>
-
-	  	<div class="button previous">&lt;</div>
-
-      <div class="button next">></div>
-
-	  	<div class="fourS carView">
-	  		<div class="carName">
-	  		  <h1>Taycan 4S</h1>
-	  	    <img src="img/taycan_1.png" alt="Taycan 4S">
-	  	  </div>
-		  	<div class="acceleration">
-		  		<h2>4,0s</h2>
-		  		<p>Acceleration 0 - 100 km/h with Launch Control</p>
-		  	</div>
-	      <div class="kW">
-	      	<h2>390 kW/530 PS</h2>
-	      	<p>Overboost Power with Launch Control up to (kW)/Overboost Power with Launch Control up to (PS)</p>
-	      </div>
-	      <div class="topSpeed">
-	      	<h2>250 km/h</h2>
-	      	<p>Top speed</p>
-	      </div>
-	      <div class="withBorder TechnoSpecs">
-	      	<a href="#">> Technical Specs</a>
-	      </div>
-	      <div class="withBorder BuildYourOwn">
-	      	<a href="#">> Build Your Own</a>
-	      </div>
-	      <div class="withBorder Compare">
-	      	<a href="#">> Compare</a>
-	      </div>
-	  	</div>
-
-	  	<div class="Turbo carView">
-	  		<div class="carName">
-	  		  <h1>Taycan Turbo</h1>
-	  	    <img src="img/taycan_2.png" alt="Taycan Turbo">
-	  	  </div>
-		  	<div class="acceleration">
-		  		<h2>3,2s</h2>
-		  		<p>Acceleration 0 - 100 km/h with Launch Control</p>
-		  	</div>
-	      <div class="kW">
-	      	<h2>500 kW/680 PS</h2>
-	      	<p>Overboost Power with Launch Control up to (kW)/Overboost Power with Launch Control up to (PS)</p>
-	      </div>
-	      <div class="topSpeed">
-	      	<h2>260 km/h</h2>
-	      	<p>Top speed</p>
-	      </div>
-	      <div class="withBorder TechnoSpecs">
-	      	<a href="#">> Technical Specs</a>
-	      </div>
-	      <div class="withBorder BuildYourOwn">
-	      	<a href="#">> Build Your Own</a>
-	      </div>
-	      <div class="withBorder Compare">
-	      	<a href="#">> Compare</a>
-	      </div>
-	  	</div>
-
-	  	<div class="TurboS carView">
-	  		<div class="carName">
-	  		  <h1>Taycan Turbo S</h1>
-	  	    <img src="img/taycan_3.png" alt="Taycan S">
-	  	  </div>
-		  	<div class="acceleration">
-		  		<h2>2,8s</h2>
-		  		<p>Acceleration 0 - 100 km/h with Launch Control</p>
-		  	</div>
-	      <div class="kW">
-	      	<h2>560 kW/761 PS</h2>
-	      	<p>Overboost Power with Launch Control up to (kW)/Overboost Power with Launch Control up to (PS)</p>
-	      </div>
-	      <div class="topSpeed">
-	      	<h2>260 km/h</h2>
-	      	<p>Top speed</p>
-	      </div>
-	      <div class="withBorder TechnoSpecs">
-	      	<a href="#">> Technical Specs</a>
-	      </div>
-	      <div class="withBorder BuildYourOwn">
-	      	<a href="#">> Build Your Own</a>
-	      </div>
-	      <div class="withBorder Compare">
-	      	<a href="#">> Compare</a>
-	      </div>
-	  	</div>
-
-	  	<div class="circles">
-	  		<div class="first"></div>
-	  		<div class="second"></div>
-	  		<div class="third"></div>
-	  	</div>
-	  	
-    </section>
-
-    <div class="anchors">
-    	<a href="#Highlights">Highlights</a>
-    	<a href="#Design">Design</a>
-    	<a href="#Performance">Performance</a>
-    </div>
-
-    <section id="Highlights" class="anchorsBlock">
-    	<h1>Highlights</h1>
-    	<p>Taycan Turbo S</p>
-    	<p>The Taycan is ready fot the future, thanks to its innovative total concept. It is characterised by the features that have always been decisive for any Porsche: pure emotion and maximum driving pleasert.**</p>
-    	<div class="wrapper">
-	    	<div class="acceleration">
-	    	  <h2>2,8 s</h2>
-	    	  <p>Acceleration 0 - 100 km/h with Launch Control</p>
-	    	</div>
-	    	<div class="Overboost">
-	    	  <h2>560 kW/761 PS</h2>
-	    	  <p>Overboost Power with Launch Control up to (kW)/Overboost Power with Launch Control up to (PS)</p>
-    	  </div>
-    	</div>
-    	<a href="#"><span>+</span> Explore Highlights</a>
-    </section>
-
-    <section id="Design" class="anchorsBlock">
-      <h1>Design</h1>
-      <p>Puristic, expressive, timeless. Three attributes that describe every Porsche – and especially this one, which takes our DNA into a new automotive era.</p>
-      <div class="wrapper">
-      	<h2>Four-point LED headlights</h2>
-      	<h2>Lateral air intakes (aircurtains)</h2>
-      	<h2>16.8-inch curved display</h2>
-      </div>
-      <a href="#"><span>+</span> Explore Design</a>
-    </section>
-
-    <section id="Performance" class="anchorsBlock">
-    	<h1>Performance</h1>
-    	<p>The key to designing an outstanding drivetrain was the systematic continuation of the purpose-design approach: no compromises with the perfect interaction of drive components.**</p>
-      <div class="wrapper">
-      	<h2>800-volt Performance Battery</h2>
-      	<h2>Permanent magnet synchronous machine</h2>
-      	<h2>Porsche Recuperation Management (PRM)</h2>
-      </div>
-      <a href="#"><span>+</span> Explore Performance</a>
-    </section>
-
-    <section class="parallax">
-      <div class="road">
-        <div class="Personalisation text">
-          <h3>Personalisation & finishing</h3>
-          <p>In the Porsche Exclusive Manufaktur we offer you a variety of personalisation options for exterior and interior. For your completely personalised vehicle.</p>
-        <a href="#">Personalisation & finishing</a>
-        </div>
-        <div class="Contact text">
-          <h3>Contact</h3>
-          <p>Contact us to request more information.</p>
-          <a href="#">To the contact form</a>
-        </div>
-        <div class="car"></div>
-      </div>
-    </section>
-
+  	</div>
   </main>
 
-  <footer>
-  	<div class="lists">
-  		<ul class="Build">
-  			<li><h3>Build & Find</h3></li>
-  			<li><a href="#">Build your Porsche</a></li>
-  			<li><a href="#">Compare Models</a></li>
-  			<li><a href="#">Search Pre-Owned</a></li>
-  		</ul>
-  		<ul class="Online">
-  			<li><h3>Online Services</h3></li>
-  			<li><a href="#">Porsche Login</a></li>
-  			<li><a href="#">Sign up for News</a></li>
-  		</ul>
-  		<ul class="Behind">
-  			<li><h3>Behind the Scenes</h3></li>
-  			<li><a href="#">Passion Motorsports</a></li>
-  			<li><a href="#">Porsche Experience</a></li>
-  			<li><a href="#">Porsche Classic</a></li>
-  			<li><a href="#">About Porsche - Porsche Museum</a></li>
-  		</ul>
-  		<ul class="Porsche">
-  			<li><h3>Porsche Company</h3></li>
-  			<li><a href="#">At a Glance</a></li>
-  			<li><a href="#">Responsibility</a></li>
-  			<li><a href="#">Jobs & Careers</a></li>
-  			<li><a href="#">FAQ</a></li>
-  			<li><a href="#">Christophorus - The Porsche Magazine</a></li>
-  		</ul>
+  <footer></footer>
 
-  	</div>
-   
-    <div class="connecting">
-  			<h3>Connect with Porsche</h3>
-  			<a class="facebook" href="#"></a>
-  			<a class="youtube" href="#"></a>
-  			<a class="twitter" href="#"></a>
-  			<a class="instagram" href="#"></a>
-    </div>
-
-  	<div class="copyright">2020 Dr. Ing. h.c. F. Porsche AG.</div>
-
-  </footer>
-  
-  <script src="script.js"></script>
 </body>
 </html>
