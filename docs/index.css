@@ -125,7 +125,6 @@ header .basket #order:hover {
 main .slider {
   width: 98%;
   margin: 10px auto;
-  border: 5px solid black;
   overflow: hidden;
 }
 
@@ -134,28 +133,32 @@ main .slider .slide-wrapper {
   width: 100%;
   margin-bottom: 10px;
   border-radius: 30px;
-  background: grey;
   transition: all 1s ease 0s;
   display: flex;
 }
 
-main .slider .slide-wrapper:active {
+/*main .slider .slide-wrapper:active {
   transform: translate(-100%, 0);
-}
+}*/
 
 main .slider .slide-wrapper div {
   border-radius: 30px;
+  border: 1px solid black;
   min-width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
 }
 
-main .slider .slide-wrapper .action-1 { background: red }
+main .slider .slide-wrapper .action-1 { background-image: url('img/action_1.jpeg') }
 
-main .slider .slide-wrapper .action-2 { background: green }
+main .slider .slide-wrapper .action-2 { background-image: url('img/action_2.jpg') }
 
-main .slider .slide-wrapper .action-3 { background: yellow }
+main .slider .slide-wrapper .action-3 { background-image: url('img/action_3.jpeg') }
 
-main .slider .slide-wrapper .action-4 { background: orange }
+main .slider .slide-wrapper .action-4 { background-image: url('img/action_4.png') }
+
+main .slider .slide-wrapper .action-5 { background-image: url('img/action_5.jpeg') }
 
 main .slider .switch {
   display: flex;
@@ -172,5 +175,9 @@ main .slider .switch div {
 
 main .slider .switch div:hover {
   cursor: pointer;
+}
+
+.activeCircle {
+  background: #324234;
 }
 
