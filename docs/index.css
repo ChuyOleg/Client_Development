@@ -6,10 +6,6 @@ html, body {
   font-family: Arial; 
 }
 
-body {
-  height: 2000px;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -19,6 +15,7 @@ header {
   background: #324234;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 header div.catalog {
@@ -181,3 +178,31 @@ main .slider .switch div:hover {
   background: #324234;
 }
 
+
+
+/*!!!!!!!!!!!!!
+!! Footer !!!!!
+!!!!!!!!!!!!!*/
+
+footer {
+  background: #324234;
+  color: #D2E894;
+}
+
+footer h3 {
+  margin-top: 16px;
+}
+
+footer h4 {
+  margin-top: 24px;
+}
+
+footer a {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+footer a:hover {
+  color: #87CD57;
+}
