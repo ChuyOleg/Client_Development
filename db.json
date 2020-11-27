@@ -8,7 +8,7 @@
     "weight": 255,
     "spicy": false,
     "categoryId": 1,
-    "recommended": false,
+    "recommended": false
   }, {
     "url": "pizza_gavaii",
     "productName": "Гаваї",
