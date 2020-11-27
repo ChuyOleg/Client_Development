@@ -86,7 +86,7 @@
     "categoryId": 2,
     "recommended": false
   }, {
-    "url": "desert_cheesecake",
+    "url": "dessert_cheesecake",
     "productName": "Чизкейк",
     "productDescription": "Суміш з цих інгредієнтів кладеться на основу з печива або солодких крекерів. Часто додають приправи (ваніль, шоколад) і прикраси з фруктів, наприклад, полуниці.",
     "price": 45,
@@ -95,7 +95,7 @@
     "categoryId": 3,
     "recommended": false
   }, {
-    "url": "desert_brownie",
+    "url": "dessert_brownie",
     "productName": "Брауні",
     "productDescription": "Брауні - шоколадний десерт у вигляді тістечка, торту, пирога або кексу з досить вологим м'якушем.",
     "price": 53,
@@ -104,7 +104,7 @@
     "categoryId": 3,
     "recommended": true
   }, {
-    "url": "desert_cherry_croissant",
+    "url": "dessert_cherry_croissant",
     "productName": "Вишневий круасан",
     "productDescription": "Вишневий круасан - традиційний для французької та австрійської кухонь невеликий хлібо-булочний кондитерський виріб у формі півмісяця з начинкою.",
     "price": 38,
@@ -113,7 +113,7 @@
     "categoryId": 3,
     "recommended": false
   }, {
-    "url": "desert_apple_pie",
+    "url": "dessert_apple_pie",
     "productName": "Яблучний пиріг",
     "productDescription": "Шарлотка — солодкий пиріг із яблук, запечених у тісті, до складу якого входять борошно, яйця, цукор, кориця.",
     "price": 41,
@@ -134,7 +134,7 @@
     "description": "Вода — основа більшості напоїв, які споживає людина, як в чистому, так і в газованому вигляді."
   }, {
     "categoryId": 3,
-    "url": "desert",
+    "url": "dessert",
     "name": "Десерти",
     "description": "Десе́рт (фр. «розчищати стіл») — страва, що подають після обіду, тобто основних страв."
   }],
