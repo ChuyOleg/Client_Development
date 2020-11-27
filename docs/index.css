@@ -45,6 +45,7 @@ header div.logo a div {
   background: white;
   color: black;
   font-weight: bold;
+  text-align: center;
 }
 
 header div.logo a:hover div {
@@ -134,10 +135,6 @@ main .slider .slide-wrapper {
   display: flex;
 }
 
-/*main .slider .slide-wrapper:active {
-  transform: translate(-100%, 0);
-}*/
-
 main .slider .slide-wrapper div {
   border-radius: 30px;
   border: 1px solid black;
@@ -205,4 +202,36 @@ footer a {
 
 footer a:hover {
   color: #87CD57;
+}
+
+@media only screen and (max-width: 991px) {
+  header .basket {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  header .basket {
+  	margin: 0 5% 0 10%;
+    width: 200px;
+  }
+  header .basket .img-quantity {
+    width: 40%;
+  }
+
+  header .basket #quantity {
+    margin-left: 5px;
+  }
+
+  header .basket #order {
+    width: 60%;
+  }
+
+  header .basket #price {
+  	display: none;
+  }
+
+  main .slider .slide-wrapper {
+    height: 300px;
+  }
 }
