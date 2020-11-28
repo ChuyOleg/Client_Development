@@ -116,6 +116,10 @@ header .basket #order:hover {
   background: #952C2C;
 }
 
+a.activePage {
+  color: #F8BE64 !important;
+}
+
 /*!!!!!!!!!!!!!!!
 !!!!! MAIN !!!!!!
 !!!!!!!!!!!!!!!*/

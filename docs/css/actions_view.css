@@ -6,7 +6,7 @@ div.actionWrapperRow {
 div.actionWrapperCol {
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 15px;
   position: relative;
 }
@@ -38,4 +38,3 @@ div.dataPosted {
   bottom: 5px;
   font-weight: bold;
 }
-

@@ -1,7 +1,8 @@
 "use strict";
 
-import { actionsView } from './actions_view.js';
 import { mainView } from './main_view.js'
+import { actionsView } from './actions_view.js';
+import { pizzaView } from './pizza_view.js';
 import { activateSlider } from './slider.js';
 
 const getActivePage = () => {
@@ -10,6 +11,10 @@ const getActivePage = () => {
 	  case '#action':
 	    actionsView();
 	    break;
+
+    case '#pizza':
+      pizzaView();
+      break;
 
 	  default:
 	    document.location.hash = '';

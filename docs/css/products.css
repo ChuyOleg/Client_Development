@@ -1,0 +1,13 @@
+div.pizzaWrapperRow {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.productWrapperCol {
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.productImage {
+  width: 100%;
+}

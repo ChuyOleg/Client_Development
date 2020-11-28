@@ -4,6 +4,7 @@ import { getData } from './getData.js';
 
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
 const main = document.querySelector('main');
+const actionsButton = document.querySelector('.actionCatalog a');
 
 const actionsView = () => {
 	getData(actionsURL).then(actions => {
@@ -18,12 +19,12 @@ const actionsView = () => {
 	    const imageURL = action['images'];
 	    
 		  const actionBlock = `
-			      <div class="col-lg-5 actionWrapperCol">
-			        <h3 class="actionTitle">${action['name']}</h3>
-			        <img class="actionImage" src="${imageURL}">
-			        <div class="actionDescription">${action['description']}</div>
-			        <div class="dataPosted">${action['dataPosted']}</div>
-			      </div>
+			  <div class="col-lg-5 actionWrapperCol">
+			    <h3 class="actionTitle">${action['name']}</h3>
+			    <img class="actionImage" src="${imageURL}">
+			    <div class="actionDescription">${action['description']}</div>
+			    <div class="dataPosted">${action['dataPosted']}</div>
+			  </div>
 		  `
 
 		  actionsHTML += actionBlock;
@@ -33,7 +34,7 @@ const actionsView = () => {
 	        </div>
 	      </div>
 	    `;
-
+    actionsButton.classList.add('activePage');
 	  main.innerHTML = actionsHTML;
 	})
 };
