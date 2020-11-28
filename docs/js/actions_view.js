@@ -15,7 +15,8 @@ const actionsView = () => {
 
 	  actions.forEach(action => {
 
-	    const imageURL = '..' + action['images'];
+	    const imageURL = action['images'];
+	    
 		  const actionBlock = `
 			      <div class="col-lg-5 actionWrapperCol">
 			        <h3 class="actionTitle">${action['name']}</h3>

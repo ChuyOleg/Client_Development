@@ -4,7 +4,7 @@
     "productName": "Маргарита",
     "productDescription": "Напевно, одна з найсмачніших і популярних піц не тільки в Італії, але і у всьому світі - це піца «Маргарита».",
     "price": 120,
-    "images": "/img/mozarella.jpg",
+    "images": "img/mozarella.jpg",
     "weight": 255,
     "spicy": false,
     "categoryId": 1,
@@ -14,7 +14,7 @@
     "productName": "Гаваї",
     "productDescription": "Піца «Гаваї» або «Гавайська» піца - ох як солодко звучать ці слова! Відразу хочеться повернутися в літо, вдихати запах моря, слухати легке тремтіння хвиль, бігати по білому піску і смакувати ароматну піцу «Гаваї». У нашій піцерії піца «Гаваї» теж користується особливою популярністю і створена спеціально для поціновувачів неординарних поєднань - кисло-солодких смаків та дуету ананаса з куркою.",
     "price": 125,
-    "images": "/img/gavaii.jpg",
+    "images": "img/gavaii.jpg",
     "weight": 240,
     "spicy": false,
     "categoryId": 1,
@@ -24,7 +24,7 @@
     "productName": "Порчіні",
     "productDescription": "Соус Рікота, Гриби запечені білі та Печериці з цибулею, Печериці свіжі, Рукола.",
     "price": 110,
-    "images": "/img/porcini.jpg",
+    "images": "img/porcini.jpg",
     "weight": 230,
     "spicy": true,
     "categoryId": 1,
@@ -34,7 +34,7 @@
     "productName": "Модильяні",
     "productDescription": "Напевно, одна з найсмачніших і популярних піц не тільки в Італії, але і у всьому світі. Подвійна Качка, Підвійний Маринований перець, Фета, Каперси, соус Класичний.",
     "price": 145,
-    "images": "/img/modigliani.jpg",
+    "images": "img/modigliani.jpg",
     "weight": 250,
     "spicy": false,
     "categoryId": 1,
@@ -44,7 +44,7 @@
     "productName": "Салямі",
     "productDescription": "Піца «Супер Салямі» створена нами спеціально для поціновувачів піци з ковбасою. Такої кількості салямі, як в нашій піці «Супер Салямі», знайти ніде неможливо! «Краса в простоті» як то кажуть, і це безпосередньо стосується до нашої піці Салямі.",
     "price": 130,
-    "images": "/img/salame.jpg",
+    "images": "img/salame.jpg",
     "weight": 250,
     "spicy": true,
     "categoryId": 1,
@@ -54,7 +54,7 @@
     "productName": "Апельсиновий сік",
     "productDescription": "Апельсиновий сік відомий своєю користю для здоров'я, зокрема, через високий вміст вітаміну C.",
     "price": 30,
-    "images": "/img/orange_juice.jpg",
+    "images": "img/orange_juice.jpg",
     "weight": 0.5,
     "categoryId": 2,
     "recommended": true
@@ -63,7 +63,7 @@
     "productName": "Яблучний сік",
     "productDescription": "Яблучний сік — сік, вичавлений з яблук. Солодкий смак соку обумовлений вмістом в яблуках натурального цукру.",
     "price": 35,
-    "images": "/img/apple_juice.jpg",
+    "images": "img/apple_juice.jpg",
     "weight": 0.5,
     "categoryId": 2,
     "recommended": false
@@ -72,7 +72,7 @@
     "productName": "Гарячий шоколад",
     "productDescription": "Гарячий шоколад, какао-напій або просто какао — напій, до складу якого входять какао, молоко або вершки і цукор.",
     "price": 40,
-    "images": "/img/hot_chocolate.jpg",
+    "images": "img/hot_chocolate.jpg",
     "weight": 0.5,
     "categoryId": 2,
     "recommended": false
@@ -81,7 +81,7 @@
     "productName": "Чорний чай",
     "productDescription": "Чорний чай — вид чаю, який отримують шляхом повного або майже повного окиснення листа чайного куща. Китайські чорні чаї в Китаї називають червоними або багряними.",
     "price": 15,
-    "images": "/img/black_tea.jpg",
+    "images": "img/black_tea.jpg",
     "weight": 0.3,
     "categoryId": 2,
     "recommended": false
@@ -90,7 +90,7 @@
     "productName": "Чизкейк",
     "productDescription": "Суміш з цих інгредієнтів кладеться на основу з печива або солодких крекерів. Часто додають приправи (ваніль, шоколад) і прикраси з фруктів, наприклад, полуниці.",
     "price": 45,
-    "images": "/img/cheesecake.jpg",
+    "images": "img/cheesecake.jpg",
     "weight": 150,
     "categoryId": 3,
     "recommended": false
@@ -99,7 +99,7 @@
     "productName": "Брауні",
     "productDescription": "Брауні - шоколадний десерт у вигляді тістечка, торту, пирога або кексу з досить вологим м'якушем.",
     "price": 53,
-    "images": "/img/brownie.jpg",
+    "images": "img/brownie.jpg",
     "weight": 200,
     "categoryId": 3,
     "recommended": true
@@ -108,7 +108,7 @@
     "productName": "Вишневий круасан",
     "productDescription": "Вишневий круасан - традиційний для французької та австрійської кухонь невеликий хлібо-булочний кондитерський виріб у формі півмісяця з начинкою.",
     "price": 38,
-    "images": "/img/cherry_croissant.jpg",
+    "images": "img/cherry_croissant.jpg",
     "weight": 175,
     "categoryId": 3,
     "recommended": false
@@ -117,7 +117,7 @@
     "productName": "Яблучний пиріг",
     "productDescription": "Шарлотка — солодкий пиріг із яблук, запечених у тісті, до складу якого входять борошно, яйця, цукор, кориця.",
     "price": 41,
-    "images": "/img/apple_pie.jpg",
+    "images": "img/apple_pie.jpg",
     "weight": 180,
     "categoryId": 3,
     "recommended": false
@@ -141,31 +141,31 @@
   "actions": [{
     "url": "action_super_puper",
     "name": "Два більше одного!",
-    "images": "/img/action_1.jpeg",
+    "images": "img/action_1.jpeg",
     "description": "Замовляй кожну другу піцу зі знижкою -30%! Акція розповсюджується на піци середнього та великого розміру на будь-якому типі тіста. Акція діє на доставку, на замовлення у піцерії та з собою.",
     "dataPosted": "27.11.2020"
   }, {
     "url": "action_delivery",
     "name": "Безконтактна доставка",
-    "images": "/img/action_2.jpg",
+    "images": "img/action_2.jpg",
     "description": "Акція діє на доставку та адресну доставку (замовлення видається біля піцерії). Акція не сумується з іншими акційними пропозиціями.",
     "dataPosted": "26.11.2020"
   }, {
     "url": "action_discountAll",
     "name": "Знижка на все!",
-    "images": "/img/action_3.jpeg",
+    "images": "img/action_3.jpeg",
     "description": "Нова вигідна пропозиція! Отримуй 20% знижки на своє замовлення у піцерії! Акція розповсюджується на всі позиції з меню.",
     "dataPosted": "25.11.2020"
   }, {
     "url": "action_more_better",
     "name": "Більше - краще!",
-    "images": "/img/action_4.png",
+    "images": "img/action_4.png",
     "description": "Щовівторка Domino's проводить неймовірну акцію «Шалений вівторок» – купуй одну середню або велику піцу та отримуй другу зі знижкою 80%!",
     "dataPosted": "24.11.2020"
   }, {
     "url": "action_WOWeekend",
     "name": "WOWeekend у CHO_Pizza",
-    "images": "/img/action_5.jpeg",
+    "images": "img/action_5.jpeg",
     "description": "Замовляй будь-яку середню піцу лише за 199 грн чи велику піцу лише за 239 грн! Акція діє кожну п'ятницю, суботу та неділю. Акція діє на піци з меню. Акція не діє на піци за власним рецептом.",
     "dataPosted": "23.11.2020"
   }],
