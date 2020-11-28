@@ -1,11 +1,24 @@
 "use strict";
 
-const activeHash = document.location.hash;
+import { actionsView } from './actions_view.js';
+import { mainView } from './main_view.js'
+import { activateSlider } from './slider.js';
 
-switch(activeHash) {
-  case '#action':
-  ;
-  break;
+const getActivePage = () => {
+  const activeHash = document.location.hash;
+	switch(activeHash) {
+	  case '#action':
+	    actionsView();
+	    break;
+
+	  default:
+	    document.location.hash = '';
+      mainView();
+	    activateSlider();
+	    break;
+	}
 }
 
-//console.log(activeHash);
+globalThis.addEventListener('hashchange', getActivePage);
+
+globalThis.onload = getActivePage;

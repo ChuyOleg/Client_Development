@@ -3,9 +3,38 @@
 import { getData } from './getData.js';
 
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
-const categoriesURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/productsCategories';
+const main = document.querySelector('main');
 
-getData(actionsURL).then(data => console.log(data));
-//const data = getData(actionsURL);
-getData(categoriesURL).then(data => console.log(data));
+const actionsView = () => {
+	getData(actionsURL).then(actions => {
 
+	  let actionsHTML = `
+	    <div class="container-fluid">
+	      <div class="row actionWrapperRow justify-content-around">
+	  `;
+
+	  actions.forEach(action => {
+
+	    const imageURL = '..' + action['images'];
+		  const actionBlock = `
+			      <div class="col-lg-5 actionWrapperCol">
+			        <h3 class="actionTitle">${action['name']}</h3>
+			        <img class="actionImage" src="${imageURL}">
+			        <div class="actionDescription">${action['description']}</div>
+			        <div class="dataPosted">${action['dataPosted']}</div>
+			      </div>
+		  `
+
+		  actionsHTML += actionBlock;
+	  })
+	    
+	    actionsHTML += `
+	        </div>
+	      </div>
+	    `;
+
+	  main.innerHTML = actionsHTML;
+	})
+};
+
+export { actionsView };

@@ -1,0 +1,41 @@
+div.actionWrapperRow {
+  width: 100%;
+  margin: 10px auto;
+}
+
+div.actionWrapperCol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  position: relative;
+}
+div.actionWrapperCol:hover {
+  box-shadow: 3px 3px 9px black;
+}
+
+
+h3.actionTitle {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+img.actionImage {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.actionDescription {
+  margin: 5px;
+  margin-bottom: 32px;
+}
+
+div.dataPosted {
+  position: absolute;
+  right: 3%;
+  bottom: 5px;
+  font-weight: bold;
+}
+

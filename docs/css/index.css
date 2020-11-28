@@ -144,15 +144,15 @@ main .slider .slide-wrapper div {
   background-size: 100% 400px;
 }
 
-main .slider .slide-wrapper .action-1 { background-image: url('img/action_1.jpeg') }
+main .slider .slide-wrapper .action-1 { background-image: url('../img/action_1.jpeg') }
 
-main .slider .slide-wrapper .action-2 { background-image: url('img/action_2.jpg') }
+main .slider .slide-wrapper .action-2 { background-image: url('../img/action_2.jpg') }
 
-main .slider .slide-wrapper .action-3 { background-image: url('img/action_3.jpeg') }
+main .slider .slide-wrapper .action-3 { background-image: url('../img/action_3.jpeg') }
 
-main .slider .slide-wrapper .action-4 { background-image: url('img/action_4.png') }
+main .slider .slide-wrapper .action-4 { background-image: url('../img/action_4.png') }
 
-main .slider .slide-wrapper .action-5 { background-image: url('img/action_5.jpeg') }
+main .slider .slide-wrapper .action-5 { background-image: url('../img/action_5.jpeg') }
 
 main .slider .switch {
   display: flex;
