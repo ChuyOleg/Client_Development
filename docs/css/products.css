@@ -3,11 +3,80 @@ div.pizzaWrapperRow {
   margin: 10px auto;
 }
 
-.productWrapperCol {
+div.productWrapperCol {
+  background: #D4F0B7;
   border: 1px solid black;
   border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+div.productWrapperCol:hover {
+  box-shadow: 3px 3px 9px black;
 }
 
 .productImage {
+  border-radius: 15px 15px 0 0;
   width: 100%;
 }
+
+h4.productTitle {
+  text-align: center;
+  padding: 5px 0;
+  font-style: italic;
+  font-weight: bold;
+}
+
+h4 .spicy {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+div.priceAndWeight {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+div.productPrice {
+  text-align: center;
+  width: 33%;
+}
+
+div.extraInfo {
+  text-align: center;
+  width: 34%;
+}
+
+div.extraInfo a {
+  font-style: italic;
+  font-size: 18px;
+  color: black;
+}
+
+div.extraInfo a:hover {
+  cursor: pointer;
+  color: #db4141;
+}
+
+div.productWeight {
+  width: 33%;
+  text-align: center;
+}
+
+div.addInBasket {
+  color: black;
+  font-weight: bold;
+  padding: 7px 0;
+  text-align: center;
+  background: #db4141;
+  border-radius: 0 0 14px 14px;
+}
+
+div.addInBasket:hover {
+  cursor: pointer;
+  background: #952C2C;
+  color: white;
+}
+
