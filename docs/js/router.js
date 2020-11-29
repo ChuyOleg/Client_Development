@@ -32,6 +32,7 @@ const getActivePage = () => {
 	}
 }
 
-globalThis.addEventListener('hashchange', getActivePage);
 
+globalThis.addEventListener('hashchange', getActivePage);
+console.log('ROUTER')
 globalThis.onload = getActivePage;

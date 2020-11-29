@@ -1,5 +1,7 @@
 "use strict";
 
+import { getData } from './getData.js';
+
 const main = document.querySelector('main');
 
 const view = `

@@ -73,7 +73,7 @@
     "productDescription": "Гарячий шоколад, какао-напій або просто какао — напій, до складу якого входять какао, молоко або вершки і цукор.",
     "price": 40,
     "images": "img/hot_chocolate.jpg",
-    "weight": 0.5,
+    "weight": 0.3,
     "categoryId": 2,
     "recommended": false
   }, {
