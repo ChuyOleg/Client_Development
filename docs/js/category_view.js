@@ -18,13 +18,12 @@ const changeButtonColor = (viewNum) => {
   buttons[viewNum].classList.add('activePage');
 }
 
-const categoryView = viewNum => {
+const categoryView = (viewNum, reason = 'default') => {
 
   if (viewsHTML === null) {
     
     const views = [];
     getData(productsURL).then(products => {
-      console.log('GET INFO');
       for (let categoryId = 1; categoryId <= 3; categoryId++) { 
 
         let productHTML = `
@@ -35,7 +34,7 @@ const categoryView = viewNum => {
         products.forEach(product => {
           if (product['categoryId'] === categoryId) {
             const imageURL = product['images'];
-            let productName = product['productName']
+            let productName = product['productName'];
             
             if (product['spicy'] === true) {
               productName += ` <span class="spicy">(гостра)</span>`;
@@ -54,7 +53,7 @@ const categoryView = viewNum => {
                 </div>
                 <div class="addInBasket">В кошик</div>
               </div>
-            `
+            `;
 
             productHTML += producctBlock;      
 
@@ -70,13 +69,21 @@ const categoryView = viewNum => {
       }
 
       viewsHTML = views;
-      main.innerHTML = viewsHTML[viewNum - 1];
-      changeButtonColor(viewNum);
+      
+      if (reason != 'loadOnly') {
+        main.innerHTML = viewsHTML[viewNum - 1];
+        changeButtonColor(viewNum);
+      }
     })
+  
   } else {
     main.innerHTML = viewsHTML[viewNum - 1];
     changeButtonColor(viewNum);
   }
+};
+
+if (!['#pizza', '#drink', '#dessert'].includes(document.location.hash)) {
+  categoryView(1, 'loadOnly');
 };
 
 export { categoryView };

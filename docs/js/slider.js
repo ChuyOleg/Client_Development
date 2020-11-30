@@ -29,16 +29,6 @@ const activateSlider = () => {
     const args = [index, circles, slide_wrapper];
     circle.addEventListener('click', changeAction.bind(null, ...args));
   })
-
-  /*circles.forEach((circle, index) => {
-    circle.addEventListener('click', () => {
-      if (activeCircleIndex != index) {
-        circles[activeCircleIndex].classList.remove('activeCircle');
-        changeAction(activeCircleIndex, index, slide_wrapper);
-        circle.classList.add('activeCircle');
-      }
-    })
-  })*/
 };
 
 export { activateSlider };
