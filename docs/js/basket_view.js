@@ -4,6 +4,8 @@ const main = document.querySelector('main');
 
 const basketView = products => {
   
+  const totalPrice = document.querySelector('#price').innerText;
+
   let basketHTML = `
     <div class="container-fluid">
       <div class="row actionWrapperRow justify-content-around">
@@ -28,9 +30,12 @@ const basketView = products => {
             <img class="pizzaImage productImage" src="${imageURL}">
             <div class="orderPriceAndWeight">
               <h4 class="productTitle">${productName}</h4>
-              <div class="productWeight">${weight}</div>
-              <div class="productPrice"><span>${product['price']}</span> грн</div>
-              <div class="extraInfo"><a href="#${product['productName']}">деталі</a></div>
+              <div class="orderWeightPrice">
+                <div class="productWeight">${weight}</div>
+                <div class="productPrice"><span>${product['price']}</span> грн</div>
+              </div>
+              <div class="orderExtraInfo"><a href="#${product['productName']}">деталі</a></div>
+              <div class="orderCounter"><span>1</span></div>
             </div>
             <div class="plusOne">+1</div>
             <div class="minusOne">-1</div>
@@ -44,7 +49,9 @@ const basketView = products => {
     }
   })
 
-  basketHTML += `<div class="orderButton col-12"><a href="#order">Замовити</a></div>`;
+  basketHTML += `
+  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice}</span></div>
+  <div class="orderButton col-12"><a href="#order">Замовити</a></div>`;
  
   main.innerHTML = basketHTML;
 }

@@ -4,6 +4,7 @@ main {
 
 .orderTitle {
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .orderWrapperCol {
@@ -16,7 +17,18 @@ main {
   width: 40%;
   height: 100%;
   border-radius: 15px 0 0 15px;
-} 
+}
+
+.totalPrice {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.orderButton {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
 .orderButton a {
   display: block;
@@ -41,23 +53,89 @@ main {
   width: 50%;
 }
 
-.plusOne {
+.orderWeightPrice {
+  display: flex;
+}
+
+.orderWeightPrice .productWeight {
+  width: 50%;
+  text-align: center;
+}
+
+.orderWeightPrice .productPrice {
+  width: 50%;
+  text-align: center;
+}
+
+.orderCounter {
+  width: 100%;
+}
+
+.orderCounter span {
+  display: block;
+  margin: 10px auto;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
   border: 1px solid black;
-  border-radius: 0 15px 0 0;
-  background: green;
+  border-radius: 5px;
+}
+
+.orderExtraInfo {
+  text-align: center;
+}
+
+.orderExtraInfo a {
+  color: black;
+  /*display: inline-block;
+  margin: 0 auto;*/
+}
+
+.orderExtraInfo a:hover {
+  color: #B62C2C;
+} 
+
+.plusOne {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #74db74;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0 14px 0 5px;
   font-weight: bold;
   position: absolute;
   top: 0;
   right: 0;
 }
 
+.plusOne:hover {
+  cursor: pointer;
+  background: #39aa39;
+  color: white;
+}
+
 .minusOne {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ff7575;
+  color: black;
   border: 1px solid black;
-  border-radius: 0 0 15px 0;
-  background: red;
+  border-radius: 5px 0 14px 0;
   font-weight: bold;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.minusOne:hover {
+  cursor: pointer;
+  background: #DC3838;
+  color: white;
 }
 
