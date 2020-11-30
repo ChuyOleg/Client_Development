@@ -1,11 +1,12 @@
 "use strict";
 
-import { getData } from './getData.js';
 import { activateSlider } from './slider.js';
+import { addInBasketListener, updateButtons } from './addInBasket.js';
 
-const main = document.querySelector('main');
-const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
+let main = document.querySelector('main');
 const buttons = document.querySelectorAll('.catalog a');
+
+let mainViewHTML = null;
 
 let view = `
   <div class="slider">
@@ -26,66 +27,55 @@ let view = `
   </div>
 `
 
-let recommendations = null;
+const mainView = (products) => {
 
-const mainView = (reason = 'default') => {
-  if (recommendations === null) {
-    getData(productsURL).then(products => {
-  
-      let productHTML = `
-        <div class="container-fluid">
-          <div class="row pizzaWrapperRow justify-content-around">
-            <h3 class='recommended col-12 text-center'>Наші Рекомендації</h3>
-      `;
-
-      products.forEach(product => {
-        if (product['recommended'] === true) {
-          const imageURL = product['images'];
-          const productName = product['productName'];
-          const weight = (product['categoryId'] === 2) ? `${product['weight']} л` : `${product['weight']} г`;
-          const productBlock = `
-            <div class=" ml-2 col-sm-4 productWrapperCol pizzaWrapperCol">
-              <img class="pizzaImage productImage" src="${imageURL}">
-              <h4 class="productTitle">${productName}</h4>
-              <div class="priceAndWeight">
-                  <div class="productWeight">${weight}</div>
-                  <div class="extraInfo"><a href="#${product['productName']}">деталі</a></div>
-                  <div class="productPrice">${product['price']} грн</div>
-              </div>
-              <div class="addInBasket">В кошик</div>
-            </div>
-          `
-          productHTML += productBlock;  
-        }
-      })
-
-      productHTML += `
-            </div>
-          </div>
-        `;
-
-      recommendations = productHTML;
-
-      if (reason != 'loadOnly') {
-        main.innerHTML = view + recommendations;
-        activateSlider();
-        buttons.forEach((button) => {
-          button.classList = [];
-        })
-      }
-
-    })
-  } else {
-    main.innerHTML = view + recommendations;
+  if (mainViewHTML != null) {
+    main.innerHTML = mainViewHTML;
     activateSlider();
+    addInBasketListener(); 
+    updateButtons();
     buttons.forEach((button) => {
       button.classList = [];
     })
+    return;
   }
-}
 
-if (document.location.hash != '') {
-  mainView('loadOnly');
+  let productHTML = `
+    <div class="container-fluid">
+      <div class="row pizzaWrapperRow justify-content-around">
+        <h3 class='recommended col-12 text-center'>Наші Рекомендації</h3>
+  `;
+  
+  products.forEach((product, index) => {
+
+    if (product['recommended'] === true) {
+      const imageURL = product['images'];
+      const productName = product['productName'];
+      const weight = (product['categoryId'] === 2) ? `${product['weight']} л` : `${product['weight']} г`;
+      const productBlock = `
+        <div class=" ml-2 col-sm-4 productWrapperCol pizzaWrapperCol">
+          <img class="pizzaImage productImage" src="${imageURL}">
+          <h4 class="productTitle">${productName}</h4>
+          <div class="priceAndWeight">
+              <div class="productWeight">${weight}</div>
+              <div class="extraInfo"><a href="#${product['productName']}">деталі</a></div>
+              <div class="productPrice"><span>${product['price']}</span> грн</div>
+          </div>
+          <div id="add${index}" class="addInBasket">В кошик</div>
+          <div id="rem${index}" class="removeFromBasket">Відмінити</div>
+        </div>
+      `
+      productHTML += productBlock;
+    }
+  })
+
+  productHTML += `
+      </div>
+    </div>
+  `;
+
+  mainViewHTML = view + productHTML;
+
 }
 
 export { mainView };
