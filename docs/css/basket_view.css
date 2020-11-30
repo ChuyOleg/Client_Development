@@ -1,0 +1,63 @@
+main {
+  min-height: 60vh;
+}
+
+.orderTitle {
+  margin-top: 20px;
+}
+
+.orderWrapperCol {
+  height: 150px;
+  display: flex;
+  position: relative;
+}
+
+.orderWrapperCol .productImage {
+  width: 40%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+} 
+
+.orderButton a {
+  display: block;
+  color: black;
+  width: 100px;
+  text-align: center;
+  background: #db4141;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.orderButton a:hover {
+  cursor: pointer;
+  color: white;
+  background: #952C2C;
+}
+
+.orderPriceAndWeight {
+  display: block;
+  width: 50%;
+}
+
+.plusOne {
+  border: 1px solid black;
+  border-radius: 0 15px 0 0;
+  background: green;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.minusOne {
+  border: 1px solid black;
+  border-radius: 0 0 15px 0;
+  background: red;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+

@@ -4,7 +4,7 @@ let productsHTML = null;
 
 const createProducts = (products) => {
 	if (productsHTML != null) return productsHTML;
-  const result = [];
+v  const result = [];
   products.forEach(product => {
     const div = document.createElement('div');
     let productName = product['productName'];

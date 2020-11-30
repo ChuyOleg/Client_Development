@@ -112,8 +112,7 @@ header .basket #basket {
   border-radius: 20px;
 }
 
-header .basket #basket
-:hover {
+header .basket #basket:hover {
   background: #952C2C;
 }
 

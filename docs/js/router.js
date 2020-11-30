@@ -3,8 +3,9 @@
 import { mainView } from './main_view.js'
 import { actionsView } from './actions_view.js';
 import { categoryView } from './category_view.js';
+import { basketView } from './basket_view.js';
 import { getData } from './getData.js';
-import { createProducts } from './createProducts.js'
+// import { createProducts } from './createProducts.js'
 
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
@@ -32,6 +33,10 @@ const getActivePage = (data) => {
       categoryView(products, 3);
       break;
 
+    case '#basket':
+      basketView(products);
+      break;   
+  
 	  default:
       mainView();
 	    break;
@@ -46,6 +51,9 @@ const getActivePage = (data) => {
   actionsView(actions);
   categoryView(products, 1); // no matter 1, 2 or 3
   mainView(products);
+  
+  // basketView(products);
+
   // const productsHTML = createProducts(products);
   getActivePage(data);
  

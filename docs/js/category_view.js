@@ -44,7 +44,7 @@ const categoryView = (products, viewNum) => {
       
         const weight = (categoryId === 2) ? `${product['weight']} л` : `${product['weight']} г`;
         
-        const producctBlock = `
+        const productBlock = `
           <div class="col-lg-3 ml-1 col-sm-5 productWrapperCol pizzaWrapperCol">
             <img class="pizzaImage productImage" src="${imageURL}">
             <h4 class="productTitle">${productName}</h4>
@@ -58,7 +58,7 @@ const categoryView = (products, viewNum) => {
           </div>
         `;
 
-        productHTML += producctBlock;
+        productHTML += productBlock;
       }
     })
 
