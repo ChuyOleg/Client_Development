@@ -38,13 +38,13 @@ const addInBasketListener = () => {
     button.addEventListener('click', () => {
     	const productId = button.id.slice(3);
     	const cart = JSON.parse(localStorage.getItem('cart'));
-    	delete cart[productId];
-      localStorage.setItem('cart', JSON.stringify(cart));
+      quantity.innerText = Number.parseInt(quantity.innerText) - Number.parseInt(cart[productId]);
       button.style.display = 'none';
       addInBasketButtons[index].style.display = 'block';
-      quantity.innerText--;
       const productPrice = button.parentNode.querySelector('.productPrice span').innerText;
-      price.innerText = Number.parseInt(price.innerText) - Number.parseInt(productPrice);
+      price.innerText = Number.parseInt(price.innerText) - (Number.parseInt(productPrice) * Number.parseInt(cart[productId]));
+    	delete cart[productId];
+      localStorage.setItem('cart', JSON.stringify(cart));
     })
   });
 }

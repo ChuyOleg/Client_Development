@@ -4,7 +4,6 @@ import { activateSlider } from './slider.js';
 import { addInBasketListener, updateButtons } from './addInBasket.js';
 
 let main = document.querySelector('main');
-const buttons = document.querySelectorAll('.catalog a');
 
 let mainViewHTML = null;
 
@@ -34,9 +33,6 @@ const mainView = (products) => {
     activateSlider();
     addInBasketListener(); 
     updateButtons();
-    buttons.forEach((button) => {
-      button.classList = [];
-    })
     return;
   }
 

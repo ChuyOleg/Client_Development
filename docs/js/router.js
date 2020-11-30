@@ -11,6 +11,14 @@ const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Develop
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
 const categoriesURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/productsCategories';
 
+const buttons = document.querySelectorAll('.catalog a');
+const clearButtonsColor = () => {
+	buttons.forEach((button) => {
+	  button.classList = [];
+	});
+}
+
+
 const getActivePage = (data) => {
   const products = data[0];
   const actions = data[1];
@@ -35,10 +43,12 @@ const getActivePage = (data) => {
 
     case '#basket':
       basketView(products);
+      clearButtonsColor();
       break;   
   
 	  default:
       mainView();
+      clearButtonsColor();
 	    break;
 	}
 }

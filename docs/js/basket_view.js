@@ -4,7 +4,7 @@ const main = document.querySelector('main');
 
 const basketView = products => {
   
-  const totalPrice = document.querySelector('#price').innerText;
+  const totalPrice = document.querySelector('#price span');
 
   let basketHTML = `
     <div class="container-fluid">
@@ -37,12 +37,10 @@ const basketView = products => {
               <div class="orderExtraInfo"><a href="#${product['productName']}">деталі</a></div>
               <div class="orderCounter"><span>1</span></div>
             </div>
-            <div class="plusOne">+1</div>
-            <div class="minusOne">-1</div>
+            <div id="one${index}" class="plusOne">+1</div>
+            <div id="one${index}" class="minusOne">-1</div>
           </div>
         `;
-            // <div id="add${index}" class="addInBasket">В кошик</div>
-            // <div id="rem${index}" class="removeFromBasket">Відмінити</div>
 
         basketHTML += productBlock;
       }
@@ -50,10 +48,55 @@ const basketView = products => {
   })
 
   basketHTML += `
-  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice}</span></div>
+  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span></div>
   <div class="orderButton col-12"><a href="#order">Замовити</a></div>`;
  
   main.innerHTML = basketHTML;
+
+  const plusButtons = document.querySelectorAll('.plusOne');
+  const minusButtons = document.querySelectorAll('.minusOne');
+  const counters = document.querySelectorAll('.orderCounter span');
+
+  const showTotalPrice = document.querySelector('.totalPrice span');
+  const quantity = document.getElementById('quantity');
+
+  plusButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const productPrice = button.parentNode.querySelector('.productPrice span');
+      counters[index].innerText++;
+      const newTotalPrice = Number.parseInt(totalPrice.innerText) + Number.parseInt(productPrice.innerText);
+      totalPrice.innerText = newTotalPrice;      
+      showTotalPrice.innerText = newTotalPrice;
+      quantity.innerText++;
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      cart[button.id.slice(3)] = cart[button.id.slice(3)] + 1;
+      localStorage.setItem('cart', JSON.stringify(cart));
+    })
+  });
+
+  minusButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const productPrice = button.parentNode.querySelector('.productPrice span');
+      counters[index].innerText--;
+      const newTotalPrice = Number.parseInt(totalPrice.innerText) - Number.parseInt(productPrice.innerText);
+      totalPrice.innerText = newTotalPrice;
+      showTotalPrice.innerText = newTotalPrice;
+      quantity.innerText--;
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      if (cart[button.id.slice(3)] == 1) {
+        delete cart[button.id.slice(3)];
+      } else {
+        cart[button.id.slice(3)] = cart[button.id.slice(3)] - 1;
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      if (counters[index].innerText == 0) {
+      	const parentNode = document.querySelector('.actionWrapperRow');
+        parentNode.removeChild(button.parentNode);
+      }
+    })
+  })
 }
+
+const addButton = document.querySelector('.plusOne');
 
 export { basketView };

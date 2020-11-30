@@ -73,7 +73,7 @@ main {
 
 .orderCounter span {
   display: block;
-  margin: 10px auto;
+  /*margin: 10px auto;*/
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -81,6 +81,9 @@ main {
   font-weight: bold;
   border: 1px solid black;
   border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 60px;
 }
 
 .orderExtraInfo {
