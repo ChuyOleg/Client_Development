@@ -7,26 +7,8 @@ let main = document.querySelector('main');
 
 let mainViewHTML = null;
 
-let view = `
-  <div class="slider">
-	  <div class="slide-wrapper">
-			<div class="action-1"></div>
-			<div class="action-2"></div>
-			<div class="action-3"></div>
-			<div class="action-4"></div>
-			<div class="action-5"></div>
-		</div>
-  	<div class="switch">
-  		<div class="circle"></div>
-  		<div class="circle"></div>
-  		<div class="circle"></div>
-  		<div class="circle"></div>
-  		<div class="circle"></div>
-  	</div>
-  </div>
-`
 
-const mainView = (products) => {
+const mainView = (products, actions) => {
 
   if (mainViewHTML != null) {
     main.innerHTML = mainViewHTML;
@@ -35,6 +17,25 @@ const mainView = (products) => {
     updateButtons();
     return;
   }
+
+  let view = `
+  <div class="slider">
+    <div class="slide-wrapper">
+      <div class="action-1"><a href="#${actions[0]['url']}">Деталі</a></div>
+      <div class="action-2"><a href="#${actions[1]['url']}">Деталі</a></div>
+      <div class="action-3"><a href="#${actions[2]['url']}">Деталі</a></div>
+      <div class="action-4"><a href="#${actions[3]['url']}">Деталі</a></div>
+      <div class="action-5"><a href="#${actions[4]['url']}">Деталі</a></div>
+    </div>
+    <div class="switch">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+`
 
   let productHTML = `
     <div class="container-fluid">

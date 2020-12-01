@@ -5,7 +5,8 @@ import { actionsView } from './actions_view.js';
 import { categoryView } from './category_view.js';
 import { basketView } from './basket_view.js';
 import { getData } from './getData.js';
-import { productView } from './product_view.js'
+import { productView } from './product_view.js';
+import { actionView } from './action_view.js';
 
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
@@ -68,11 +69,11 @@ const getActivePage = (data) => {
       break;
 
     case (actionUrl):
-      console.log('YES');
+      actionView(actions[actionId], actionId)
       break;
   
 	  default:
-      mainView();
+      mainView(products, actions);
       clearButtonsColor();
 	    break;
 	}
@@ -85,14 +86,14 @@ const getActivePage = (data) => {
   const data = [products, actions, categories];
   actionsView(actions);
   categoryView(products, 1); // no matter 1, 2 or 3
-  mainView(products);
+  mainView(products, actions);
   products.forEach((product, index) => {
-    productView(product, index)
+    productView(product, index);
   });
+  actions.forEach((action, index) => {
+    actionView(action, index);
+  })
   
-  // basketView(products);
-
-  // const productsHTML = createProducts(products);
   getActivePage(data);
  
   // globalThis.onload = getActivePage;

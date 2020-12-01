@@ -39,6 +39,9 @@ const basketView = products => {
 
         const weight = (product['productId'] === 2) ? `${product['weight']} л` : `${product['weight']} г`;
       
+        const cart = JSON.parse(localStorage.getItem('cart'));
+        const productQuantity = cart[index];
+
         const productBlock = `
           <div class="col-lg-5 ml-1 col-sm-10 orderWrapperCol productWrapperCol pizzaWrapperCol">
             <img class="pizzaImage productImage" src="${imageURL}">
@@ -49,7 +52,7 @@ const basketView = products => {
                 <div class="productPrice"><span>${product['price']}</span> грн</div>
               </div>
               <div class="orderExtraInfo"><a href="#${product['productName']}">деталі</a></div>
-              <div class="orderCounter"><span>1</span></div>
+              <div class="orderCounter"><span>${productQuantity}</span></div>
             </div>
             <div id="one${index}" class="plusOne">+1</div>
             <div id="one${index}" class="minusOne">-1</div>

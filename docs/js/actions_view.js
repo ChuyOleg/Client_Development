@@ -16,11 +16,13 @@ const changeButtonColor = () => {
 let view = null;
 
 const actionsView = (actions) => {
+
 	if (view != null) {
     main.innerHTML = view;
     changeButtonColor();
     return;
 	}
+	
   let actionsHTML = `
     <div class="container-fluid">
       <div class="row actionWrapperRow justify-content-around">
@@ -31,7 +33,10 @@ const actionsView = (actions) => {
     const actionBlock = `
 		  <div class="col-lg-5 actionWrapperCol">
 		    <h3 class="actionTitle">${action['name']}</h3>
-		    <img class="actionImage" src="${imageURL}">
+		    <div class="imageWithButton">
+			    <img class="actionImage" src="${imageURL}">
+			    <a class="actionDetails" href="#${action['url']}">Деталі</a>
+		    </div>
 		    <div class="actionDescription">${action['description']}</div>
 		    <div class="dataPosted">${action['dataPosted']}</div>
 		  </div>

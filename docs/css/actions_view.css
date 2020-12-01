@@ -21,10 +21,32 @@ h3.actionTitle {
   margin-top: 5px;
 }
 
+div.imageWithButton {
+  position: relative;
+}
+
 img.actionImage {
-  display: block;
   width: 100%;
-  margin: 0 auto;
+}
+
+a.actionDetails {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #EA97E8;
+  font-weight: bold;
+  color: black;
+}
+
+a.actionDetails:hover {
+  color: white;
+  background: #9F329D;
 }
 
 div.actionDescription {
