@@ -2,8 +2,21 @@
 
 const main = document.querySelector('main');
 
+const cartIsEmpty = () => {
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  for (const key in cart) {
+    return false;
+  }
+  return true;
+}
+
 const basketView = products => {
   
+  if (cartIsEmpty()) {
+    document.location.hash = '#';
+    return;
+  }
+
   const totalPrice = document.querySelector('#price span');
 
   let basketHTML = `
@@ -14,6 +27,7 @@ const basketView = products => {
   const cart = JSON.parse(localStorage.getItem('cart'));
   
   products.forEach((product, index) => {
+
     for (const key in cart) {
       if (index == key) {
         const imageURL = product['images'];
@@ -48,7 +62,7 @@ const basketView = products => {
   })
 
   basketHTML += `
-  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span></div>
+  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span> грн</div>
   <div class="orderButton col-12"><a href="#order">Замовити</a></div>`;
  
   main.innerHTML = basketHTML;

@@ -4,7 +4,7 @@
     "productName": "Маргарита",
     "productDescription": "Напевно, одна з найсмачніших і популярних піц не тільки в Італії, але і у всьому світі - це піца «Маргарита».",
     "price": 120,
-    "images": "img/mozarella.jpg",
+    "images": "img/mozzarella.jpg",
     "weight": 255,
     "spicy": false,
     "categoryId": 1,

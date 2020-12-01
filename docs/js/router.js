@@ -5,7 +5,7 @@ import { actionsView } from './actions_view.js';
 import { categoryView } from './category_view.js';
 import { basketView } from './basket_view.js';
 import { getData } from './getData.js';
-// import { createProducts } from './createProducts.js'
+import { productView } from './product_view.js'
 
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
@@ -18,11 +18,27 @@ const clearButtonsColor = () => {
 	});
 }
 
+const findUrlForCase = (array) => {
+  let urlForCase = array[0]['url'];
+  let elemIndex = 0;
+  array.forEach((elem, index) => {
+    if (document.location.hash == ('#' + elem['url'])) {
+      urlForCase = document.location.hash;
+      elemIndex = index;
+      return;
+    }
+  })
+  return { urlForCase, elemIndex };
+}
 
 const getActivePage = (data) => {
   const products = data[0];
   const actions = data[1];
   const categories = data[2];
+
+  const { urlForCase: productUrl, elemIndex: productId } = findUrlForCase(products);
+  const { urlForCase: actionUrl, elemIndex: actionId } = findUrlForCase(actions);
+
   const activeHash = document.location.hash;
 	switch(activeHash) {
 	  case '#action':
@@ -44,7 +60,16 @@ const getActivePage = (data) => {
     case '#basket':
       basketView(products);
       clearButtonsColor();
-      break;   
+      break;
+
+    case (productUrl):
+      productView(products[productId], productId);
+      clearButtonsColor();
+      break;
+
+    case (actionUrl):
+      console.log('YES');
+      break;
   
 	  default:
       mainView();
@@ -61,6 +86,9 @@ const getActivePage = (data) => {
   actionsView(actions);
   categoryView(products, 1); // no matter 1, 2 or 3
   mainView(products);
+  products.forEach((product, index) => {
+    productView(product, index)
+  });
   
   // basketView(products);
 

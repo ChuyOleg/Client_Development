@@ -50,7 +50,7 @@ const categoryView = (products, viewNum) => {
             <h4 class="productTitle">${productName}</h4>
             <div class="priceAndWeight">
               <div class="productWeight">${weight}</div>
-              <div class="extraInfo"><a href="#${product['productName']}">деталі</a></div>
+              <div class="extraInfo"><a href="#${product['url']}">деталі</a></div>
               <div class="productPrice"><span>${product['price']}</span> грн</div>
             </div>
             <div id="add${index}" class="addInBasket">В кошик</div>
