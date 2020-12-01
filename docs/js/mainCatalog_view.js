@@ -8,30 +8,37 @@ const buttons = document.querySelectorAll('.catalog a');
 
 let viewsHTML = null;
 
-const changeButtonColor = (viewNum) => {
+const changeButtonColor = () => {
   buttons.forEach(button => {
     if (button.classList.length != 0) {
       button.classList = [];
     }
   })
-  buttons[viewNum].classList.add('activePage');
+  buttons[1].classList.add('activePage');
 }
 
-const categoryView = (products, viewNum) => {
+const mainCatalogView = products => {
 
   if (viewsHTML != null) {
-    main.innerHTML = viewsHTML[viewNum - 1];
+    main.innerHTML = viewsHTML;
     addInBasketListener();
     updateButtons();
-    changeButtonColor(viewNum + 1);
+    changeButtonColor();
     return;
   }
+  
+  let mainView = ``;
 
-  const views = []; 
   for (let categoryId = 1; categoryId <= 3; categoryId++) {
+    
+    let categoryName = 'Піца';
+    if (categoryId === 2) categoryName = 'Напої';
+    if (categoryId === 3) categoryName = 'Десерти';
+
     let productHTML = `
       <div class="container-fluid">
         <div class="row pizzaWrapperRow justify-content-around">
+          <h4 class="catalogName col-12 text-center">${categoryName}</h4>
     `;
     products.forEach((product, index) => {
       if (product['categoryId'] === categoryId) {
@@ -67,10 +74,12 @@ const categoryView = (products, viewNum) => {
       </div>
     `;
 
-    views.push(productHTML);
+    if (categoryId != 3) productHTML += `<hr>`
+
+    mainView += productHTML;
   }
 
-  viewsHTML = views;
+  viewsHTML = mainView;
 }
 
-export { categoryView };
+export { mainCatalogView };

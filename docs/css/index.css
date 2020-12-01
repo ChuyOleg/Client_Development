@@ -200,7 +200,13 @@ main .slider .switch div:hover {
   background: #324234;
 }
 
+h4.catalogName {
+  margin: 20px 0;
+}
 
+hr {
+  border-top: 3px solid grey !important;
+}
 
 /*!!!!!!!!!!!!!
 !! Footer !!!!!

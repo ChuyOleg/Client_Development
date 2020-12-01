@@ -7,6 +7,7 @@ import { basketView } from './basket_view.js';
 import { getData } from './getData.js';
 import { productView } from './product_view.js';
 import { actionView } from './action_view.js';
+import { mainCatalogView } from './mainCatalog_view.js';
 
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
@@ -46,6 +47,10 @@ const getActivePage = (data) => {
 	    actionsView(actions);
 	    break;
 
+    case '#mainCatalog':
+      mainCatalogView(products);
+      break;
+
     case '#pizza':
       categoryView(products, 1);
       break;
@@ -69,7 +74,8 @@ const getActivePage = (data) => {
       break;
 
     case (actionUrl):
-      actionView(actions[actionId], actionId)
+      actionView(actions[actionId], actionId);
+      clearButtonsColor();
       break;
   
 	  default:
@@ -85,6 +91,7 @@ const getActivePage = (data) => {
   const categories = await getData(categoriesURL);
   const data = [products, actions, categories];
   actionsView(actions);
+  mainCatalogView(products);
   categoryView(products, 1); // no matter 1, 2 or 3
   mainView(products, actions);
   products.forEach((product, index) => {

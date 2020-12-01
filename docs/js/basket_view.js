@@ -51,7 +51,7 @@ const basketView = products => {
                 <div class="productWeight">${weight}</div>
                 <div class="productPrice"><span>${product['price']}</span> грн</div>
               </div>
-              <div class="orderExtraInfo"><a href="#${product['productName']}">деталі</a></div>
+              <div class="orderExtraInfo"><a href="#${product['url']}">деталі</a></div>
               <div class="orderCounter"><span>${productQuantity}</span></div>
             </div>
             <div id="one${index}" class="plusOne">+1</div>
