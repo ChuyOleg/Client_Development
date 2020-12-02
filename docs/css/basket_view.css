@@ -82,7 +82,14 @@ main {
   border-radius: 5px;
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 30px;
+  animation: counter 2s linear infinite alternate;
+}
+
+@keyframes counter {
+  100% {
+    top: 90px;
+  }
 }
 
 .orderExtraInfo {
@@ -139,6 +146,25 @@ main {
   color: white;
 }
 
+.statusQuantity {
+  width: 34%;
+}
+
+.statusQuantity div {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.moreInfo {
+  margin-top: 20px;
+}
+
 form.orderFormRow {
   width: 80%;
   margin: 0 auto;
@@ -160,9 +186,13 @@ form input {
 }
 
 input:invalid {
-  border: 1px solid red;
+  border: 1px solid red !important;
 }
 
 input:valid {
   border: 2px solid green;
+}
+
+input:hover {
+  
 }

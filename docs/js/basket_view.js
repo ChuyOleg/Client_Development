@@ -1,5 +1,7 @@
 "use strict";
 
+import { plusFunc, minusFunc, sendOrder } from './basket_script.js';
+
 const main = document.querySelector('main');
 
 const cartIsEmpty = () => {
@@ -22,8 +24,7 @@ const orderForm = `
     <input type="text" name="address" required class="col-8 col-md-5" placeholder="Адрес">
     <input type="text" name="date" required class="col-8 col-md-5" placeholder="Дата доставки">
     <input type="text" name="time" required class="col-8 col-md-5" placeholder="Час доставки">
-    <input type="text" name="paymentMethod" required class="col-8 col-md-5" placeholder="оплата">
-    <input type="text" name="paymentMethod" required class="col-8 col-md-5" placeholder="оплата">
+    <input type="text" name="paymentMethod" pattern="готівка|картка" required class="col-8 col-md-5" placeholder="готівка ||| картка">
   </form>
 `;
 
@@ -84,7 +85,7 @@ const basketView = products => {
 
   basketHTML += `<div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span> грн</div></div>`;
   basketHTML += orderForm;
-  basketHTML += `<div class="orderButton col-12"><button name="button" form="orderForm">Замовити</button></div></div>`;
+  basketHTML += `<div class="orderButton col-12"><button type="button" form="orderForm">Замовити</button></div></div>`;
   main.innerHTML = basketHTML;
 
   const plusButtons = document.querySelectorAll('.plusOne');
@@ -94,43 +95,13 @@ const basketView = products => {
   const showTotalPrice = document.querySelector('.totalPrice span');
   const quantity = document.getElementById('quantity');
 
-  plusButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      const productPrice = button.parentNode.querySelector('.productPrice span');
-      counters[index].innerText++;
-      const newTotalPrice = Number.parseInt(totalPrice.innerText) + Number.parseInt(productPrice.innerText);
-      totalPrice.innerText = newTotalPrice;      
-      showTotalPrice.innerText = newTotalPrice;
-      quantity.innerText++;
-      const cart = JSON.parse(localStorage.getItem('cart'));
-      cart[button.id.slice(3)] = cart[button.id.slice(3)] + 1;
-      localStorage.setItem('cart', JSON.stringify(cart));
-    })
-  });
+  plusButtons.forEach((button, index) => plusFunc(button, index, minusButtons, counters, showTotalPrice, quantity, totalPrice));  
+  minusButtons.forEach((button, index) => minusFunc(button, index, minusButtons, counters, showTotalPrice, quantity, totalPrice));  
 
-  minusButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      const productPrice = button.parentNode.querySelector('.productPrice span');
-      counters[index].innerText--;
-      const newTotalPrice = Number.parseInt(totalPrice.innerText) - Number.parseInt(productPrice.innerText);
-      totalPrice.innerText = newTotalPrice;
-      showTotalPrice.innerText = newTotalPrice;
-      quantity.innerText--;
-      const cart = JSON.parse(localStorage.getItem('cart'));
-      if (cart[button.id.slice(3)] == 1) {
-        delete cart[button.id.slice(3)];
-      } else {
-        cart[button.id.slice(3)] = cart[button.id.slice(3)] - 1;
-      }
-      localStorage.setItem('cart', JSON.stringify(cart));
-      if (counters[index].innerText == 0) {
-      	const parentNode = document.querySelector('.actionWrapperRow');
-        parentNode.removeChild(button.parentNode);
-      }
-    })
-  })
+  const sendButton = document.querySelector('.orderButton button');
+  const inputs = document.querySelectorAll('input');
+  
+  sendButton.addEventListener(('click'), sendOrder.bind(null, inputs));
 }
-
-const addButton = document.querySelector('.plusOne');
 
 export { basketView };

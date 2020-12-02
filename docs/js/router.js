@@ -8,6 +8,7 @@ import { getData } from './getData.js';
 import { productView } from './product_view.js';
 import { actionView } from './action_view.js';
 import { mainCatalogView } from './mainCatalog_view.js';
+import { statusView } from './order_status.js';
 
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
@@ -36,7 +37,7 @@ const findUrlForCase = (array) => {
   return { urlForCase, elemIndex };
 }
 
-const getActivePage = (data) => {
+const getActivePage = data => {
   const products = data[0];
   const actions = data[1];
   const categories = data[2];
@@ -80,6 +81,14 @@ const getActivePage = (data) => {
       actionView(actions[actionId], actionId);
       clearButtonsColor();
       break;
+
+    case ('#id1'):
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      statusView(products, cart);
+      clearButtonsColor();
+      localStorage.removeItem('cart');
+      localStorage.setItem('cart', JSON.stringify({}));
+      break;
   
 	  default:
       mainView(products, actions);
@@ -106,6 +115,5 @@ const getActivePage = (data) => {
   
   getActivePage(data);
  
-  // globalThis.onload = getActivePage;
   globalThis.addEventListener('hashchange', getActivePage.bind(null, data));
 })();
