@@ -30,7 +30,7 @@ main {
   margin-bottom: 10px;
 }
 
-.orderButton a {
+.orderButton button {
   display: block;
   color: black;
   width: 100px;
@@ -42,7 +42,7 @@ main {
   margin: 0 auto;
 }
 
-.orderButton a:hover {
+.orderButton button:hover {
   cursor: pointer;
   color: white;
   background: #952C2C;
@@ -73,7 +73,6 @@ main {
 
 .orderCounter span {
   display: block;
-  /*margin: 10px auto;*/
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -92,8 +91,6 @@ main {
 
 .orderExtraInfo a {
   color: black;
-  /*display: inline-block;
-  margin: 0 auto;*/
 }
 
 .orderExtraInfo a:hover {
@@ -142,3 +139,30 @@ main {
   color: white;
 }
 
+form.orderFormRow {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+form.orderFormRow input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+form input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}

@@ -12,6 +12,9 @@ import { mainCatalogView } from './mainCatalog_view.js';
 const productsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/products';
 const actionsURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/actions';
 const categoriesURL = 'https://my-json-server.typicode.com/OlegChuy/Client_Development/productsCategories';
+const main = document.querySelector('main');
+
+main.innerHTML = `<div class="loader"></div>`
 
 const buttons = document.querySelectorAll('.catalog a');
 const clearButtonsColor = () => {

@@ -6,6 +6,24 @@ body {
   font-family: Arial; 
 }
 
+.loader {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  position: relative;
+  top: 22vh;
+  border: 10px solid #63BCD5;
+  border-radius: 50%;
+  border-left-color: #3951DB;
+  animation: loader 1.5s linear infinite; 
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 a {
   text-decoration: none !important;
 }
@@ -207,6 +225,8 @@ h4.catalogName {
 hr {
   border-top: 3px solid grey !important;
 }
+
+
 
 /*!!!!!!!!!!!!!
 !! Footer !!!!!

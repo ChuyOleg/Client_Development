@@ -10,6 +10,24 @@ const cartIsEmpty = () => {
   return true;
 }
 
+const orderForm = `
+  <form id="orderForm" action="" method="post" class="row orderFormRow justify-content-around">
+    <input type="text" name="name" required class="col-8 col-md-3" placeholder="Ім'я">
+    <input type="text" name="lastName" required class="col-8 col-md-3" placeholder="Фамілія">
+    <input type="text" list="phone" name="phone"pattern="380[0-9]{9}" required class="col-8 col-md-3" placeholder="Телефон">
+    <datalist id="phone">
+      <option>380937777777</option>
+    </datalist>
+    <input type="email" name="email" required class="col-8 col-md-5" placeholder="Email">
+    <input type="text" name="address" required class="col-8 col-md-5" placeholder="Адрес">
+    <input type="text" name="date" required class="col-8 col-md-5" placeholder="Дата доставки">
+    <input type="text" name="time" required class="col-8 col-md-5" placeholder="Час доставки">
+    <input type="text" name="paymentMethod" required class="col-8 col-md-5" placeholder="оплата">
+    <input type="text" name="paymentMethod" required class="col-8 col-md-5" placeholder="оплата">
+  </form>
+`;
+
+
 const basketView = products => {
   
   if (cartIsEmpty()) {
@@ -64,10 +82,9 @@ const basketView = products => {
     }
   })
 
-  basketHTML += `
-  <div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span> грн</div>
-  <div class="orderButton col-12"><a href="#order">Замовити</a></div>`;
- 
+  basketHTML += `<div class="totalPrice col-12 text-center">Повна ціна: <span>${totalPrice.innerText}</span> грн</div></div>`;
+  basketHTML += orderForm;
+  basketHTML += `<div class="orderButton col-12"><button name="button" form="orderForm">Замовити</button></div></div>`;
   main.innerHTML = basketHTML;
 
   const plusButtons = document.querySelectorAll('.plusOne');
